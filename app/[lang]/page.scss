@@ -1,0 +1,5 @@
+@use 'variables' as var;
+
+.test {
+  background-color: var(--primary-color);
+}
