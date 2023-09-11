@@ -1,21 +1,28 @@
-'use client'
-
+"use client";
+// Public & Assets
 import IconDay from "../../public/theme_day.svg";
 import IconNight from "../../public/theme_night.svg";
+// Next Functions
 import Image from "next/image";
-import { useState } from 'react'
+// React Functions
+import { useContext } from "react";
+// Context
+import { ColorThemeContext } from "../../context/color-theme.context";
 
-const ThemeToggleBtn = () => {
-  const [isDarkTheme, setDarkTheme] = useState(false)
-
+// Create btn that will change color theme of website
+const ColorThemeBtn = () => {
+  // Use Context
+  const { isDarkTheme, setDarkTheme } = useContext(ColorThemeContext);
+  // Create btn handler that will add or remove 'dark-theme' class from html tag
   const switchTheme = () => {
     if (!isDarkTheme) {
       document.documentElement.classList.add("dark-theme");
     } else {
       document.documentElement.classList.remove("dark-theme");
     }
-    setDarkTheme(!isDarkTheme)
-  }
+    // Set opposite theme throught context
+    setDarkTheme(!isDarkTheme);
+  };
 
   return (
     <button
@@ -32,4 +39,4 @@ const ThemeToggleBtn = () => {
   );
 };
 
-export default ThemeToggleBtn;
+export default ColorThemeBtn;

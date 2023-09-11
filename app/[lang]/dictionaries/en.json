@@ -1,6 +1,127 @@
 {
-    "meta": {
-      "description": "Personal website for presentation"
-    },
+  "lang": "en",
+  "meta": {
+    "description": "Personal website for presentation"
+  },
+  "section_header": {
+    "menu": {
+      "education": "",
+      "techstack": "",
+      "contact": ""
+  }},
+  "section_hero": {
+    "main": {
+      "name": "ADAM BARTŮŠEK,",
+      "proffesion": {
+        "1": "SOFTWARE",
+        "2": "ENGINEER"
+      },
+      "level": "Junior level"
+    }
+  },
+  "section_education": {
+    "aside": "",
+    "main": {
+      "highschool": {
+        "title": "",
+        "content": ""
+      },
+      "university": {
+        "title": "",
+        "content": ""
+      },
+      "selfeducation": {
+        "title": "",
+        "content": ""
+      }
+    }
+  },
+  "section_techstack": {
+    "aside": "",
+    "main": {
+      "1": {
+        "title": "",
+        "content": "",
+        "projects": {
+          "title": "PROJECTS",
+          "content": "10+"
+        }
+      },
+      "2": {
+        "title": "",
+        "content": "",
+        "projects": {
+          "title": "PROJECTS",
+          "content": "5"
+        }
+      },
+      "3": {
+        "title": "",
+        "content": "",
+        "projects": {
+          "title": "PROJECTS",
+          "content": "2"
+        }
+      },
+      "4": {
+        "title": "",
+        "content": "",
+        "projects": {
+          "title": "PROJECTS",
+          "content": ""
+        }
+      },
+      "5": {
+        "title": "",
+        "content": "",
+        "projects": {
+          "title": "PROJECTS",
+          "content": ""
+        }
+      },
+      "6": {
+        "title": "Python",
+        "content": "",
+        "projects": {
+          "title": "PROJECTS",
+          "content": "10+"
+        }
+      }
+    }
+  },
+  "section_contact": {
+    "aside": "",
+    "main": {
+      "job_demand": {
+        "title": "",
+        "content": {
+          "1": {
+            "title": "",
+            "description": ""
+          },
+          "2": {
+            "title": "",
+            "description": ""
+          },
+          "3": {
+            "title": "",
+            "description": ""
+          },
+          "4": {
+            "title": "",
+            "description": ""
+          }
+        }
+      },
+      "contact": {
+        "phone": "+420778033073",
+        "email": "yourprogrammeradam@gmail.com",
+        "link_github": "https://github.com/adambprograming",
+        "link_linkin": "https://www.linkedin.com/in/adam-bart%C5%AF%C5%A1ek-251107286/"
+      }
+    }
+  },
+  "section_footer":{
     "copyright": "Copyright © 2023 Adam Bartůšek. All Rights Reserved."
   }
+}

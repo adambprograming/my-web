@@ -1,6 +1,124 @@
 {
-    "meta": {
-      "description": "Osobní webové stránky pro prezentaci"
-    },
+  "lang": "cz",
+  "meta": {
+    "description": "Osobní webové stránky pro prezentaci"
+  },
+  "section_header": {
+    "menu": {
+      "education": "VZDĚLÁNÍ",
+      "techstack": "TECHSTACK",
+      "contact": "KONTAKT"
+  }},
+  "section_hero": {
+    "main": {
+      "name": "ADAM BARTŮŠEK,",
+      "proffesion": "SOFTWARE\nENGINEER",
+      "level": "Junior level"
+    }
+  },
+  "section_education": {
+    "aside": "V\nZ\nD\nĚ\nL\nÁ\nN\nÍ",
+    "main": {
+      "highschool": {
+        "title": "Střední škola",
+        "content": "Pominuli 2. stupeň v matematické třídě, tak můj zájem k technickým oborům a IT začal na Střední škole elektrotechnické v Pardubicích (SPŠE), kde jsem studoval Komunikační technologie. Právě tady jsem se potkal s programováním, nejvíce s backendem (Java) a mikroprocesory (Arduino), ale také jsem trochu také s frontendem, tedy tvorbou webů a webových aplikací."
+      },
+      "university": {
+        "title": "Univerzita",
+        "content": "Pro své další studia jsem si vybral UHK, fakultu FIM, obor Informační management. Aktuálně studuji bakalářské studium a plánuji pokračovat na magisterské v oboru. Také jsem se tu trochu přiblížil k programování (html, css, javascript a java), ale po roce jsem zjistil, že se budu muset většinu věcí naučit sám."
+      },
+      "selfeducation": {
+        "title": "Sebevzdělání",
+        "content": "Nejprve jsem se chtěl seznámit s backendem, protože mě zajímalo jak to všechno funguje, proto jsem se rok učil python. Poté jsem si chtěl alespoň trochu doplnit znalosti z front-endu a umět full-stack, ale u front-endu jsem nakonec zůstal a poslední rok se v něm snažím zlepšovat. Primárně se snažím zlepšovat v reactu/nextu a psát kvalitní čitelný kód."
+      }
+    }
+  },
+  "section_techstack": {
+    "aside": "T\nE\nC\nH\nS\nT\nA\nC\nK",
+    "main": {
+      "1": {
+        "title": "HTML5, CSS3 & Sass",
+        "content": "",
+        "projects": {
+          "title": "PROJEKTY",
+          "content": "10+"
+        }
+      },
+      "2": {
+        "title": "Javascript",
+        "content": "",
+        "projects": {
+          "title": "PROJEKTY",
+          "content": "5"
+        }
+      },
+      "3": {
+        "title": "React",
+        "content": "Rozhodování mezi frameworky React a Angular pro mě bylo trochu složitější, ale nakonec jsem zvolil  React a zpětně mi to přijde jako skvělá volba. Poprvé jsem se s Reactem setkal  ve svém první FrontEnd kurzu a ještě než jsem ho kompletně dodělal pořídil jsem kurz specializovaný na React, Redux a Typescript, který dodělávám dodnes.",
+        "projects": {
+          "title": "PROJEKTY",
+          "content": "2"
+        }
+      },
+      "4": {
+        "title": "Next.js",
+        "content": "",
+        "projects": {
+          "title": "PROJEKTY",
+          "content": "2"
+        }
+      },
+      "5": {
+        "title": "Git & GitHub",
+        "content": "",
+        "projects": {
+          "title": "PROJEKTY",
+          "content": "3"
+        }
+      },
+      "6": {
+        "title": "Python",
+        "content": "",
+        "projects": {
+          "title": "PROJEKTY",
+          "content": "10+"
+        }
+      }
+    }
+  },
+  "section_contact": {
+    "aside": "K\nO\nN\nT\nA\nK\nT",
+    "main": {
+      "job_demand": {
+        "title": "Práce, kterou hledám",
+        "content": {
+          "1": {
+            "title": "POLOVIČNÍ ÚVAZEK",
+            "description": "Potřebuji práci s možností polovičního úvazku, protože stále studuji"
+          },
+          "2": {
+            "title": "SEBEROZVOJ v oboru",
+            "description": "Hledám práci v které budu moci stále zlepšovat své dosavadní dovednosti a učit se novým"
+          },
+          "3": {
+            "title": "DLOUHODOBÁ SPOLUPRÁCE",
+            "description": "Nehledám firmu, kde se ohřeji na pár měsíců, ale rád bych stabilní zázemí"
+          },
+          "4": {
+            "title": "HYBRID",
+            "description": "Rád bych našel práci s možností dojíždění do kanceláře, kde budu mít možnost pochytit know-how od senior kolegů, ale zároveň mít do budoucna možnost remote"
+          }
+        }
+      },
+      "contact": {
+        "phone": "+420778033073",
+        "email": "yourprogrammeradam@gmail.com",
+        "link_github": "https://github.com/adambprograming",
+        "link_linkin": "https://www.linkedin.com/in/adam-bart%C5%AF%C5%A1ek-251107286/?locale=cs_CZ"
+      }
+    }
+  },
+  "section_footer":{
     "copyright": "Copyright © 2023 Adam Bartůšek. Všechna práva vyhrazena."
   }
+}

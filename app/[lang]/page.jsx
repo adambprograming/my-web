@@ -1,6 +1,8 @@
+// Styles
 import './page.scss'
 
-export default function Home() {
+
+export default async function Home({params: {lang}}) {
   return (
     <main className="test">
       <p>Test</p>

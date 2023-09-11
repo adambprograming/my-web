@@ -13,6 +13,8 @@ export function middleware(request) {
  
     // e.g. incoming request is /products
     // The new URL is now /en-US/products
+    console.log(request.url);
+
     return NextResponse.redirect(
       new URL(`/${defaultLocale}/${pathname}`, request.url)
     )
