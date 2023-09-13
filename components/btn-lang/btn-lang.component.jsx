@@ -5,7 +5,7 @@ import IconEn from "../../public/lang_en.svg";
 // Next Functions
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
 // React Functions
 import { useContext } from "react";
 // Context
@@ -18,7 +18,6 @@ const LanguageBtn = () => {
   const dict = languageDict;
   // Get other parts of pathname then language ('cz'/'en')
   const pathname = usePathname().split("/").slice(2);
-  const router = useRouter();
   // Create btn handler
   const switchLang = () => {
     if (language == "cz") {
@@ -26,15 +25,19 @@ const LanguageBtn = () => {
       document.documentElement.setAttribute("lang", "en");
       // Set language throught context to en
       setLanguage("en");
-      // Change URL, but pathname after lang part of pathname stay same
-      router.push(`/en/${pathname}`);
+      // Change URL without re-render
+      window.history.pushState('EN', undefined, '/en')
+      // redirect to new URL without re-render
+      redirect(`/en/${pathname}`, 'replace');
     } else {
       // Set atribute of html tag, lang to cz
       document.documentElement.setAttribute("lang", "cz");
       // Set language throught context to cz
       setLanguage("cz");
-      // Change URL, but pathname after lang part of pathname stay same
-      router.push(`/cz/${pathname}`);
+      // Change URL without re-render
+      window.history.pushState('CZ', undefined, '/cz')
+      // redirect to new URL without re-render
+      redirect(`/cz/${pathname}`, 'replace')
     }
   };
 

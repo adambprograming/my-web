@@ -8,7 +8,7 @@ import { LanguageProvider } from "../../context/lang.context";
 // Components
 import Header from "../../components/header/header.component";
 
-export default async function RootLayout({ children, params: { lang } }) {
+export default function RootLayout({ children, params: { lang } }) {
   return (
     <html lang={lang}>
       <head>
