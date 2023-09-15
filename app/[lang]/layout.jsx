@@ -7,22 +7,23 @@ import { ColorThemeProvider } from "../../context/color-theme.context";
 import { LanguageProvider } from "../../context/lang.context";
 // Components
 import Header from "../../components/header/header.component";
+import Footer from "../../components/footer/footer.component";
 
 export default function RootLayout({ children, params: { lang } }) {
   return (
     <html lang={lang}>
       <head>
         <title>Adam Bartůšek</title>
-        {/* <meta name="description" content={dict.meta.description} /> */}
+        <meta name="description" content={lang == 'cz' ? ('Osobní webové stránky pro prezentaci') : ('Personal website for presentation')} />
       </head>
       <body suppressHydrationWarning={true}>
         <LanguageProvider lang={lang}>
           <ColorThemeProvider>
             <Header />
+            <hr />
             {children}
-            <footer>
-              {/* <p>{dict.copyright}</p> */}
-            </footer>
+            <hr />
+            <Footer />
           </ColorThemeProvider>
         </LanguageProvider>
       </body>

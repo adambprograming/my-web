@@ -15,7 +15,6 @@ import { LanguageContext } from "../../context/lang.context";
 const LanguageBtn = () => {
   // Use Context
   const { languageDict, setLanguage, language } = useContext(LanguageContext);
-  const dict = languageDict;
   // Get other parts of pathname then language ('cz'/'en')
   const pathname = usePathname().split("/").slice(2);
   // Create btn handler
@@ -43,14 +42,14 @@ const LanguageBtn = () => {
 
   return (
     <button
-      aria-label="Toggle Dark Mode"
+      aria-label={languageDict.article_header.buttons.button_lang_aria_label}
       className="toggle-button"
       onClick={switchLang}
     >
-      {dict.lang == "en" ? (
-        <Image src={IconEn} alt="Icon with EN flag meaning english language" />
+      {languageDict.lang == "en" ? (
+        <Image src={IconEn} alt={languageDict.article_header.buttons.icon_lang_en_alt} />
       ) : (
-        <Image src={IconCz} alt="Icon with CZ flag meaning czech language" />
+        <Image src={IconCz} alt={languageDict.article_header.buttons.icon_lang_cz_alt} />
       )}
     </button>
   );

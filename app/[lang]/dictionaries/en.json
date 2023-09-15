@@ -3,23 +3,31 @@
   "meta": {
     "description": "Personal website for presentation"
   },
-  "section_header": {
+  "article_header": {
+    "buttons": {
+      "button_themes_aria_label": "",
+      "icon_light_theme_alt": "",
+      "icon_dark_theme_alt": "",
+      "button_lang_aria_label": "",
+      "icon_lang_en_alt": "",
+      "icon_lang_cz_alt": ""
+    },
+    "logo_alt": "Logo",
     "menu": {
+      "icon_alt": "",
       "education": "",
       "techstack": "",
       "contact": ""
   }},
-  "section_hero": {
+  "article_hero": {
     "main": {
       "name": "ADAM BARTŮŠEK,",
-      "proffesion": {
-        "1": "SOFTWARE",
-        "2": "ENGINEER"
-      },
+      "proffesion": "SOFTWARE\nENGINEER",
       "level": "Junior level"
-    }
+    },
+    "profile_picture_alt": "Profilová fotka, Adam Bartůšek"
   },
-  "section_education": {
+  "article_education": {
     "aside": "",
     "main": {
       "highschool": {
@@ -36,7 +44,7 @@
       }
     }
   },
-  "section_techstack": {
+  "article_techstack": {
     "aside": "",
     "main": {
       "1": {
@@ -89,7 +97,7 @@
       }
     }
   },
-  "section_contact": {
+  "article_contact": {
     "aside": "",
     "main": {
       "job_demand": {
@@ -121,7 +129,7 @@
       }
     }
   },
-  "section_footer":{
+  "article_footer":{
     "copyright": "Copyright © 2023 Adam Bartůšek. All Rights Reserved."
   }
 }

@@ -3,20 +3,31 @@
   "meta": {
     "description": "Osobní webové stránky pro prezentaci"
   },
-  "section_header": {
+  "article_header": {
+    "buttons": {
+      "button_themes_aria_label": "Při kliknutí se změní barevný režim",
+      "icon_light_theme_alt": "Ikona světlého režimu",
+      "icon_dark_theme_alt": "Ikona tmavého režimu",
+      "button_lang_aria_label": "Při kliknutí se změní jazyk, v kterém je obsah stránky napsán",
+      "icon_lang_en_alt": "Ikona vlajky Velké Británie",
+      "icon_lang_cz_alt": "Ikona vlajky České Republiky"
+    },
+    "logo_alt": "Logo",
     "menu": {
+      "icon_alt": "Ikona menu, při kliknutí se rozbalí nabídka menu",
       "education": "VZDĚLÁNÍ",
       "techstack": "TECHSTACK",
       "contact": "KONTAKT"
   }},
-  "section_hero": {
+  "article_hero": {
     "main": {
       "name": "ADAM BARTŮŠEK,",
       "proffesion": "SOFTWARE\nENGINEER",
       "level": "Junior level"
-    }
+    },
+    "profile_picture_alt": "Profilová fotka, Adam Bartůšek"
   },
-  "section_education": {
+  "article_education": {
     "aside": "V\nZ\nD\nĚ\nL\nÁ\nN\nÍ",
     "main": {
       "highschool": {
@@ -33,7 +44,7 @@
       }
     }
   },
-  "section_techstack": {
+  "article_techstack": {
     "aside": "T\nE\nC\nH\nS\nT\nA\nC\nK",
     "main": {
       "1": {
@@ -86,7 +97,7 @@
       }
     }
   },
-  "section_contact": {
+  "article_contact": {
     "aside": "K\nO\nN\nT\nA\nK\nT",
     "main": {
       "job_demand": {
@@ -118,7 +129,7 @@
       }
     }
   },
-  "section_footer":{
+  "article_footer":{
     "copyright": "Copyright © 2023 Adam Bartůšek. Všechna práva vyhrazena."
   }
 }
