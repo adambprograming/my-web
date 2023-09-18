@@ -1,6 +1,6 @@
 "use client";
 // Styles
-import './btn-color-theme.styles.scss'
+import './buttons-settings.styles.scss'
 // Public & Assets
 import IconDay from "../../public/theme_day.svg";
 import IconNight from "../../public/theme_night.svg";
@@ -29,9 +29,9 @@ const ColorThemeBtn = () => {
   };
 
   return (
-    <label class="switch" aria-label={languageDict.article_header.buttons.button_themes_aria_label}>
+    <label className="switch" aria-label={languageDict.article_header.buttons.button_themes_aria_label}>
         <input type="checkbox" onClick={switchTheme}/>
-        <span class="slider"></span>
+        <span className="slider"></span>
         <Image className='left-image' src={IconDay} alt={languageDict.article_header.buttons.icon_light_theme_alt} />
         <Image className='right-image' src={IconNight} alt={languageDict.article_header.buttons.icon_dark_theme_alt} />
     </label>

@@ -1,4 +1,6 @@
 "use client";
+// Styles
+import './buttons-settings.styles.scss'
 // Public & Assets
 import IconCz from "../../public/lang_cz.svg";
 import IconEn from "../../public/lang_en.svg";
@@ -41,9 +43,9 @@ const LanguageBtn = () => {
   };
 
   return (
-    <label class="switch" aria-label={languageDict.article_header.buttons.button_lang_aria_label} >
+    <label className="switch" aria-label={languageDict.article_header.buttons.button_lang_aria_label} >
         <input type="checkbox" onClick={switchLang}/>
-        <span class="slider"></span>
+        <span className="slider"></span>
         <Image className="left-image" src={IconCz} alt={languageDict.article_header.buttons.icon_lang_cz_alt} />
         <Image className="right-image" src={IconEn} alt={languageDict.article_header.buttons.icon_lang_en_alt} />       
     </label>

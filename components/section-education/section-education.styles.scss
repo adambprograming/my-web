@@ -12,8 +12,14 @@
   margin: 10px 0px;
 }
 
+.tab.active{
+  background-color: var(--background-color);
+  border-radius: 20px;
+}
+
 .tab-button {
   background-color: var(--background-color);
+  color: var(--text-color);
   border: none;
   padding: 10px 20px;
   text-align: center;
@@ -27,13 +33,9 @@
 }
 
 .tab-content {
-  
   text-align: center;
   display: none;
   padding: 5px 15px;
-  background-color: var(--background-color);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 .tab-content.active {

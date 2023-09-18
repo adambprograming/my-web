@@ -38,7 +38,7 @@ const SectionEducation = () => {
   return (
     <div className="tab-container">
       {topics.map((topic, index) => (
-        <div className="tab" key={index}>
+        <div className={`tab ${activeTab === index ? "active" : ""}`} key={index}>
           <button
             onClick={() => handleTabClick(index)}
             className={`tab-button ${activeTab === index ? "active" : ""}`}

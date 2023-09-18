@@ -1,4 +1,4 @@
-.article-hero{
+#article-hero{
   display: flex;
   flex-direction: column;
   .content-container{
@@ -15,11 +15,25 @@
 
 
 
-.article-education {
+#article-education {
+  position: relative;
   display: flex;
   flex-direction: row;
-  clip-path: polygon(0 0, 50% 8%, 100% 10%, 100% 84%, 50% 90%, 0 100%);
+  clip-path: polygon(0 0, 50% 7%, 100% 10%, 100% 90%, 50% 93%, 0 100%);
   background-color: var(--primary-color);
+  .article-bg-img{
+    position: absolute;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../public/background-education.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat;
+    background-position: 50%;
+    opacity: 0.15; /* 20% opacity */
+    z-index: -1; /* Place the background behind other content */
+  }
   .aside-education{
     font-family: 'Gemunu Libre';
     margin: -2rem 1%;

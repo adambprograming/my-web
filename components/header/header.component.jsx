@@ -2,9 +2,8 @@
 // Styles
 import './header.styles.scss'
 // Public & Assets
-import Menu from "../../public/menu.svg";
-import LogoLightTheme from "../../public/LOGO Light.svg";
-import LogoDarkTheme from "../../public/LOGO Dark.svg";
+import LogoLightTheme from "../../public/logo_light.svg";
+import LogoDarkTheme from "../../public/logo_dark.svg";
 // Next Functions
 import Image from "next/image";
 import Link from "next/link";
@@ -14,8 +13,9 @@ import { useContext } from "react";
 import { ColorThemeContext } from "../../context/color-theme.context";
 import { LanguageContext } from "../../context/lang.context";
 // Componenets
-import ColorThemeBtn from "../btn-color-theme/btn-color-theme.component";
-import LanguageBtn from "../btn-lang/btn-lang.component";
+import ColorThemeBtn from "../buttons-settings/btn-color-theme.component";
+import LanguageBtn from "../buttons-settings/btn-lang.component";
+import MenuDropdown from '../menu-dropdown/menu-dropdown.component';
 
 const Header = () => {
   const { languageDict } = useContext(LanguageContext);
@@ -39,9 +39,7 @@ const Header = () => {
           />
         )}
       </div>
-      <nav className="container-menu">
-        <Image src={Menu} alt={languageDict.article_header.menu.icon_alt} />
-      </nav>
+      <MenuDropdown />
     </header>
   );
 };
