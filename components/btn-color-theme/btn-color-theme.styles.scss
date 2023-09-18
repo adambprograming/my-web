@@ -1,0 +1,65 @@
+/* Base styles for the switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 35px;
+}
+
+/* Hide the checkbox input */
+.switch input {
+    display: none;
+}
+
+/* The slider background color animation */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ACB5F6; /* Initial background color */
+    transition: background-color 0.4s;
+    border-radius: 34px;
+}
+
+/* Rounded sliders (knobs) */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 35px;
+    width:35px;
+    left: -0.5px;
+    bottom: 0px;
+    background-color: #1E2DB8;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Custom images on both sides */
+.left-image {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.right-image {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+/* When the switch is checked, move the slider to the right */
+input:checked + .slider:before {
+    -webkit-transform: translateX(35.5px);
+    -ms-transform: translateX(35.5px);
+    transform: translateX(35.5px);
+}

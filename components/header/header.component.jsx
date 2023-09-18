@@ -1,4 +1,6 @@
 "use client";
+// Styles
+import './header.styles.scss'
 // Public & Assets
 import Menu from "../../public/menu.svg";
 import LogoLightTheme from "../../public/LOGO Light.svg";
@@ -19,7 +21,7 @@ const Header = () => {
   const { languageDict } = useContext(LanguageContext);
   const { isDarkTheme } = useContext(ColorThemeContext);
   return (
-    <header className="article_header">
+    <header className="article-header">
       <div className="container-button">
         <ColorThemeBtn />
         <LanguageBtn />

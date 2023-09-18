@@ -9,6 +9,7 @@ import { LanguageProvider } from "../../context/lang.context";
 import Header from "../../components/header/header.component";
 import Footer from "../../components/footer/footer.component";
 
+
 export default function RootLayout({ children, params: { lang } }) {
   return (
     <html lang={lang}>
@@ -20,7 +21,6 @@ export default function RootLayout({ children, params: { lang } }) {
         <LanguageProvider lang={lang}>
           <ColorThemeProvider>
             <Header />
-            <hr />
             {children}
             <hr />
             <Footer />

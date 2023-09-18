@@ -1,5 +1,33 @@
-@use 'variables' as var;
-
-aside {
-  white-space: pre-wrap;
+.article-hero{
+  display: flex;
+  flex-direction: column;
+  .content-container{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto;
+  }
+  .profile-picture{
+    border: 0.75rem solid var(--primary-color);
+    border-radius: 50%;
+    margin: 2.5rem auto;
+  }
 }
+
+
+
+.article-education {
+  display: flex;
+  flex-direction: row;
+  clip-path: polygon(0 0, 50% 8%, 100% 10%, 100% 84%, 50% 90%, 0 100%);
+  background-color: var(--primary-color);
+  .aside-education{
+    font-family: 'Gemunu Libre';
+    margin: -2rem 1%;
+    white-space: pre-wrap;
+    font-size: 8rem;
+    line-height: 95%;
+    color: var(--text-reverse-color);
+    z-index: 1;
+  }
+}
+
