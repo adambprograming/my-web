@@ -1,11 +1,6 @@
 'use client'
 // Styles
 import './menu-dropdown.styles.scss'
-// Public & Assets
-import MenuLight from "../../public/menu_light.svg";
-import MenuDark from "../../public/menu_dark.svg"
-// Next Functions
-import Image from 'next/image';
 // React Functions
 import { useContext } from 'react';
 import { useState } from "react";
@@ -23,25 +18,23 @@ const MenuDropdown = () => {
   
     };
     return (
-    <nav className='container-menu' onClick={handleMenuClick}>
-        {isDarkTheme ? (
-          <Image
-            className='menu-icon'
-            src={MenuDark}
-            alt={languageDict.article_header.menu.icon_alt}
-          />
-        ) : (
-          <Image
-            className='menu-icon'
-            src={MenuLight}
-            alt={languageDict.article_header.menu.icon_alt}
-          />
-        )}
-            <ul className={`dropdown ${activeMenu === true ? "active" : ""}`}>
-                <li className='dropdown-item'><a href="#article-education"><h5>{languageDict.article_header.menu.education}</h5></a></li>
-                <li className='dropdown-item'><a href="#article-techstack"><h5>{languageDict.article_header.menu.techstack}</h5></a></li>
-                <li className='dropdown-item'><a href="#article-contact"><h5>{languageDict.article_header.menu.contact}</h5></a></li>
-            </ul>
+    <nav className='container-menu'>
+      <div className="menu-icon" onClick={function() {
+        document.getElementsByClassName('menu-icon').item(0).classList.toggle('active');
+        document.getElementsByClassName('line-1').item(0).classList.remove('no-animation')
+        document.getElementsByClassName('line-2').item(0).classList.remove('no-animation')
+        document.getElementsByClassName('line-3').item(0).classList.remove('no-animation')
+        handleMenuClick()
+      }}>
+        <div className="line-1 no-animation"></div>
+        <div className="line-2 no-animation"></div>
+        <div className="line-3 no-animation"></div>
+      </div>
+      <ul className={`dropdown ${activeMenu === true ? "active" : ""}`}>
+        <li className='dropdown-item'><a href="#article-education"><h5>{languageDict.article_header.menu.education}</h5></a></li>
+        <li className='dropdown-item'><a href="#article-techstack"><h5>{languageDict.article_header.menu.techstack}</h5></a></li>
+        <li className='dropdown-item'><a href="#article-contact"><h5>{languageDict.article_header.menu.contact}</h5></a></li>
+      </ul>
     </nav>
   )
 }

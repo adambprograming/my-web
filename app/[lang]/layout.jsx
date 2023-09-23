@@ -22,7 +22,6 @@ export default function RootLayout({ children, params: { lang } }) {
           <ColorThemeProvider>
             <Header />
             {children}
-            <hr />
             <Footer />
           </ColorThemeProvider>
         </LanguageProvider>

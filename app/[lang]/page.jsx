@@ -11,6 +11,7 @@ import { useContext } from "react";
 import { LanguageContext } from "../../context/lang.context";
 // Components
 import SectionEducation from "../../components/section-education/section-education.component";
+import SectionContact from "../../components/section-contact/section-contact.component";
 
 export default function Home() {
   const { languageDict } = useContext(LanguageContext);
@@ -29,17 +30,18 @@ export default function Home() {
         />
       </article>
       <article id="article-education">
-        <div className="article-bg-img"></div>
-          <aside className="aside-education">{languageDict.article_education.aside}</aside>
-          <SectionEducation />
+        <div className="education-bg-img"></div>
+        <aside className="aside-education">{languageDict.article_education.aside}</aside>
+        <SectionEducation />
       </article>
-      <hr />
       <article id="article-techstack">
-        <aside>{languageDict.article_techstack.aside}</aside>
+        <div></div>
+        <aside className="aside-techstack">{languageDict.article_techstack.aside}</aside>
       </article>
-      <hr />
       <article id="article-contact">
-        <aside>{languageDict.article_contact.aside}</aside>
+        <div className="contact-bg-img"></div>
+        <aside className="aside-contact">{languageDict.article_contact.aside}</aside>
+        <SectionContact />
       </article>
     </main>
   );

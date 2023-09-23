@@ -1,23 +1,23 @@
-.tab-container {
+.education-container {
   display: flex;
   flex-direction: column;
   width: 75%;
-  padding-right: 45px;
+  margin-right: 12.5%;
 }
 
-.tab {
+.education-tab {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: 10px 0px;
 }
 
-.tab.active{
+.education-tab.active{
   background-color: var(--background-color);
   border-radius: 20px;
 }
 
-.tab-button {
+.education-tab-button {
   background-color: var(--background-color);
   color: var(--text-color);
   border: none;
@@ -28,16 +28,16 @@
   border-radius: 20px;
 }
 
-.tab-button.active {
+.education-tab-button.active {
   background-color: var(--secondary-color);
 }
 
-.tab-content {
+.education-tab-content {
   text-align: center;
   display: none;
   padding: 5px 15px;
 }
 
-.tab-content.active {
+.education-tab-content.active {
   display: block;
 }

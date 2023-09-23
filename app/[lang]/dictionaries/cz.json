@@ -14,7 +14,7 @@
     },
     "logo_alt": "Logo",
     "menu": {
-      "icon_alt": "Ikona menu, při kliknutí se rozbalí nabídka menu",
+      "icon_alt": "Ikona menu, při kliknutí, nebo přejetí se rozbalí nabídka menu",
       "education": "VZDĚLÁNÍ",
       "techstack": "TECHSTACK",
       "contact": "KONTAKT"
@@ -32,11 +32,11 @@
     "main": {
       "highschool": {
         "title": "Střední škola",
-        "content": "Pominuli 2. stupeň v matematické třídě, tak můj zájem k technickým oborům a IT začal na Střední škole elektrotechnické v Pardubicích (SPŠE), kde jsem studoval Komunikační technologie. Právě tady jsem se potkal s programováním, nejvíce s backendem (Java) a mikroprocesory (Arduino), ale také jsem trochu také s frontendem, tedy tvorbou webů a webových aplikací."
+        "content": "Pominu-li 2. stupeň v matematické třídě, tak můj zájem k technickým oborům a IT začal na Střední škole elektrotechnické v Pardubicích (SPŠE), kde jsem studoval Komunikační technologie. Právě tady jsem se poprvé setkal s programováním, nejvíce s backendem (Java) a mikroprocesorovou technikou (Arduino), ale také trochu s frontendem, tedy tvorbou webů a webových aplikací."
       },
       "university": {
         "title": "Univerzita",
-        "content": "Pro své další studia jsem si vybral UHK, fakultu FIM, obor Informační management. Aktuálně studuji bakalářské studium a plánuji pokračovat na magisterské v oboru. Také jsem se tu trochu přiblížil k programování (html, css, javascript a java), ale po roce jsem zjistil, že se budu muset většinu věcí naučit sám."
+        "content": "Pro své další studium jsem si vybral UHK, fakultu FIM, obor Informační management. Aktuálně studuji bakalářské studium a plánuji pokračovat na magisterské ve stejném oboru. I zde jsem se přiblížil k programování (html, css, javascript, java a práce s databázemi). Znalosti získané s povinných předmětů mi úplně nestačili a proto jsem se začal učit ve volném čase sám."
       },
       "selfeducation": {
         "title": "Sebevzdělání",
@@ -49,7 +49,7 @@
     "main": {
       "1": {
         "title": "HTML5, CSS3 & Sass",
-        "content": "",
+        "content": "S HTML i CSS jsem se setkal již na základní škole a dnes je pro mě samozřejmostí oboje. Poslední dobou se s čistým HTML ani CSS nesetkávám. HTML píšu skrze JSX v Reactu a spíše než obyčejné CSS využívám preprocesor scss/sass. Ve všech třech kurzech souvisejících s programování bylo HTML i CSS, od základů až do pokročilých principů.",
         "projects": {
           "title": "PROJEKTY",
           "content": "10+"
@@ -57,7 +57,7 @@
       },
       "2": {
         "title": "Javascript",
-        "content": "",
+        "content": "Javascript je pro mě další ze základů, i když jsem se s ním setkal spíše až ke konci střední školy/začátku vysoké. V obouch kurzech zaměřených na front-end jsem se javascript učil, takže jazyk jako takový znám a rozumím mu. Nejspíše jsem se až moc rychle pustil do frameworku (React) a proto se stále ještě určité pricipy javascriptu učím za pochodu.",
         "projects": {
           "title": "PROJEKTY",
           "content": "5"
@@ -65,7 +65,7 @@
       },
       "3": {
         "title": "React",
-        "content": "Rozhodování mezi frameworky React a Angular pro mě bylo trochu složitější, ale nakonec jsem zvolil  React a zpětně mi to přijde jako skvělá volba. Poprvé jsem se s Reactem setkal  ve svém první FrontEnd kurzu a ještě než jsem ho kompletně dodělal pořídil jsem kurz specializovaný na React, Redux a Typescript, který dodělávám dodnes.",
+        "content": "Rozhodování mezi frameworky React a Angular pro mě bylo trochu složitější, ale nakonec jsem zvolil React a zpětně mi to přijde jako skvělá volba. Poprvé jsem se s Reactem setkal ve svém první FrontEnd kurzu a ještě než jsem ho kompletně dodělal, pořídil jsem kurz specializovaný na React, Redux a Typescript, který jestě dodělávám, protože nyní čas věnuji spíše reálným projektům.",
         "projects": {
           "title": "PROJEKTY",
           "content": "2"
@@ -73,7 +73,7 @@
       },
       "4": {
         "title": "Next.js",
-        "content": "",
+        "content": "Next.js pro mě nebyl až tak jednoznačnou volbou hlavně kvůli Pages router, který mi není zdaleka tak sympatický jako poměrně nový App router, ale jakmile se uvedl do provozu a už není jen v 'testovací verzi' tak začal využívat pouze Next a rád bych v něm pokračoval, i když samozřejmě nemám problém se naučit i jiný framework.",
         "projects": {
           "title": "PROJEKTY",
           "content": "2"
@@ -81,15 +81,15 @@
       },
       "5": {
         "title": "Git & GitHub",
-        "content": "",
+        "content": "Git a GitHub jsou pro mě určite základy a s Control Version se snažím pracovat na denní bázi, vždy každou úpravu kódu mít aktivně na githubu. Vím, že v každé firmě se s GitHubem pracuje a proto považuji tuto dovednost za nezbytnou. Git a GitHub jsem měl ve všech třech kurzech a setkávám se s tím v každém projektu a videu z kterých se učím.",
         "projects": {
           "title": "PROJEKTY",
-          "content": "3"
+          "content": "10+"
         }
       },
       "6": {
         "title": "Python",
-        "content": "",
+        "content": "Původně jsem v pythonu viděl svoji programátorskou budoucnost, ale po větším poznání front-endu mě zaujalo dělat spíše něco co je více vidět. I přesto jsem měl Python velice rád a absolvoval jsem celý 100 denní kurz na Udemy, který mi trval skoro rok. V kurzu jsem se dostal od hry hangman, přes práci s knihovnami (NumPy, Matplotlib, SciPy, atd.), až po základy AI.",
         "projects": {
           "title": "PROJEKTY",
           "content": "10+"
@@ -101,15 +101,15 @@
     "aside": "K\nO\nN\nT\nA\nK\nT",
     "main": {
       "job_demand": {
-        "title": "Práce, kterou hledám",
+        "title": "Co hledám",
         "content": {
           "1": {
             "title": "POLOVIČNÍ ÚVAZEK",
-            "description": "Potřebuji práci s možností polovičního úvazku, protože stále studuji"
+            "description": "Rád bych našel práci na poloviční úvazek, kvůli studiu"
           },
           "2": {
-            "title": "SEBEROZVOJ v oboru",
-            "description": "Hledám práci v které budu moci stále zlepšovat své dosavadní dovednosti a učit se novým"
+            "title": "SEBEROZVOJ",
+            "description": "Hledám práci v které budu moci stále zlepšovat své dosavadní dovednosti a učit se novým věcem"
           },
           "3": {
             "title": "DLOUHODOBÁ SPOLUPRÁCE",
@@ -117,15 +117,21 @@
           },
           "4": {
             "title": "HYBRID",
-            "description": "Rád bych našel práci s možností dojíždění do kanceláře, kde budu mít možnost pochytit know-how od senior kolegů, ale zároveň mít do budoucna možnost remote"
+            "description": "Rád bych našel práci s možností dojíždění do kanceláře, kde budu mít možnost pochytit know-how od senior kolegů, ale zároveň mít do budoucna možnost úplného remote"
           }
         }
       },
       "contact": {
         "phone": "+420778033073",
-        "email": "yourprogrammeradam@gmail.com",
+        "email": "yourprogrammeradam\n@gmail.com",
         "link_github": "https://github.com/adambprograming",
-        "link_linkin": "https://www.linkedin.com/in/adam-bart%C5%AF%C5%A1ek-251107286/?locale=cs_CZ"
+        "link_linkedin": "https://www.linkedin.com/in/adam-bart%C5%AF%C5%A1ek-251107286/?locale=cs_CZ",
+        "alts": {
+          "phone": "Ikona Telefonu",
+          "email": "Ikona E-mailu",
+          "link_github": "Ikona GitHubu",
+          "link_linkedin": "Ikona Linkedinu"
+        }
       }
     }
   },

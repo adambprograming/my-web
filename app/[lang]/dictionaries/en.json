@@ -5,19 +5,19 @@
   },
   "article_header": {
     "buttons": {
-      "button_themes_aria_label": "",
-      "icon_light_theme_alt": "",
-      "icon_dark_theme_alt": "",
-      "button_lang_aria_label": "",
+      "button_themes_aria_label": "Change color theme on click",
+      "icon_light_theme_alt": "Icon of light theme",
+      "icon_dark_theme_alt": "Icon of dark theme",
+      "button_lang_aria_label": "Change language on click",
       "icon_lang_en_alt": "Icon of Great Britain flag",
       "icon_lang_cz_alt": "Icon of Czech Republic flag"
     },
     "logo_alt": "Logo",
     "menu": {
-      "icon_alt": "",
-      "education": "",
-      "techstack": "",
-      "contact": ""
+      "icon_alt": "Menu icon, menu shows on hover or click",
+      "education": "EDUCATION",
+      "techstack": "TECHSTACK",
+      "contact": "CONTACT"
   }},
   "article_hero": {
     "main": {
@@ -25,71 +25,71 @@
       "proffesion": "SOFTWARE\nENGINEER",
       "level": "Junior level"
     },
-    "profile_picture_alt": "Profilová fotka, Adam Bartůšek"
+    "profile_picture_alt": "Profile picture, Adam Bartůšek"
   },
   "article_education": {
-    "aside": "",
+    "aside": "E\nD\nU\nC\nA\nT\nI\nO\nN",
     "main": {
       "highschool": {
-        "title": "",
-        "content": ""
+        "title": "High school",
+        "content": "Apart from 2nd grade math class, my interest in technical subjects and IT started at the Secondary School of Electrical Engineering in Pardubice (SPŠE), where I studied Communication Technology. It was here where I first encountered programming, mostly with the backend (Java) and microprocessor technology (Arduino), but also a bit with the front-end, i.e. creating websites and web applications."
       },
       "university": {
-        "title": "",
-        "content": ""
+        "title": "University",
+        "content": "For my further studies, I decided to study at UHK, FIM faculty, field of study Information Management. I am currently studying for a Bachelor's degree and I plan to continue my Master's degree in the same field. Here I also approached programming (html, css, javascript, java, and database work). The knowledge I gained from the mandatory classes wasn't quite enough, so I started learning on my own in my free time."
       },
       "selfeducation": {
-        "title": "",
-        "content": ""
+        "title": "Selfeducation",
+        "content": "First I wanted to learn about the backend because I was interested in how it all works, so I spent a year learning Python. After that, I wanted to at least get some knowledge of the front-end and learn full-stack, but I ended up staying with the front-end and I've been trying to get better at it for the last year. Primarily I'm trying to improve in react/next and write good quality readable code."
       }
     }
   },
   "article_techstack": {
-    "aside": "",
+    "aside": "T\nE\nC\nH\nS\nT\nA\nC\nK",
     "main": {
       "1": {
-        "title": "",
-        "content": "",
+        "title": "HTML5, CSS3 & Sass",
+        "content": "I was introduced to HTML and CSS in elementary school and today I am familiar with both. Lately, I have not encountered pure HTML or CSS. I write HTML through JSX in React and use the scss/sass preprocessor rather than plain CSS. All three programming related courses have included both HTML and CSS, from the basics to advanced functions.",
         "projects": {
           "title": "PROJECTS",
           "content": "10+"
         }
       },
       "2": {
-        "title": "",
-        "content": "",
+        "title": "Javascript",
+        "content": "Javascript is another of the basics for me, although I didn't encounter it until the end of high school/beginning of college. I learned javascript in both of my front-end focused courses, so I know and understand the language itself. I was probably too quick to get into the framework (React), and therefore I'm still learning some javascript principles as I go along.",
         "projects": {
           "title": "PROJECTS",
           "content": "5"
         }
       },
       "3": {
-        "title": "",
-        "content": "",
+        "title": "React",
+        "content": "Deciding between the React and Angular frameworks was a bit more difficult for me, but in the end, I chose React and in retrospect, it seems like a great choice. I first encountered React in my first FrontEnd course and before I finished it completely I took a course specialized in React, Redux and Typescript, which I'm still finishing because now I'm spending my time more on real projects.",
         "projects": {
           "title": "PROJECTS",
           "content": "2"
         }
       },
       "4": {
-        "title": "",
-        "content": "",
+        "title": "Next.js",
+        "content": "Next.js wasn't such a clear choice for me mainly because of Pages router, which I don't like nearly as much as the relatively new App router, but once it went live and is no longer in 'test version' I started using only Next and would like to continue using it, though of course, I have no problem learning another framework.",
         "projects": {
           "title": "PROJECTS",
-          "content": ""
+          "content": "2"
         }
       },
       "5": {
-        "title": "",
-        "content": "",
+        "title": "Git & GitHub",
+        "content": "Git and GitHub are definitely the basics for me, and I tend to work with Control Version on a daily basis, always having every code commit active on GitHub. I know that every company works with GitHub, so I consider this skill to be essential. I've had Git and GitHub in all three of my courses and I encounter it in every project and video I learn from.",
         "projects": {
           "title": "PROJECTS",
-          "content": ""
+          "content": "10+"
         }
       },
       "6": {
         "title": "Python",
-        "content": "",
+        "content": "I initially saw python as my future as a programmer, but after learning more about the front-end, I was more interested in doing something more visible. I still liked Python a lot and I took the entire 100 day course on Udemy, which took me almost a year. The course took me from playing hangman, through working with libraries (NumPy, Matplotlib, SciPy, etc), all the way to the basics of AI.",
         "projects": {
           "title": "PROJECTS",
           "content": "10+"
@@ -98,34 +98,40 @@
     }
   },
   "article_contact": {
-    "aside": "",
+    "aside": "C\nO\nN\nT\nA\nC\nT",
     "main": {
       "job_demand": {
-        "title": "",
+        "title": "I'm looking for",
         "content": {
           "1": {
-            "title": "",
-            "description": ""
+            "title": "HALF-TIME",
+            "description": "I need a part-time job because I'm still studying"
           },
           "2": {
-            "title": "",
-            "description": ""
+            "title": "SELFT-IMPROVEMENT",
+            "description": "I am looking for a job where I can continuously improve my existing skills and learn new ones"
           },
           "3": {
-            "title": "",
-            "description": ""
+            "title": "LONGTERM",
+            "description": "I am not looking for a company where I just warm up for a few months, but I would like a stable background"
           },
           "4": {
-            "title": "",
-            "description": ""
+            "title": "HYBRID",
+            "description": "I would like to find a job with the possibility of commuting to the office, where I will be able to pick up know-how from senior colleagues, but also have the possibility of complete full"
           }
         }
       },
       "contact": {
         "phone": "+420778033073",
-        "email": "yourprogrammeradam@gmail.com",
+        "email": "yourprogrammeradam\n@gmail.com",
         "link_github": "https://github.com/adambprograming",
-        "link_linkin": "https://www.linkedin.com/in/adam-bart%C5%AF%C5%A1ek-251107286/"
+        "link_linkedin": "https://www.linkedin.com/in/adam-bart%C5%AF%C5%A1ek-251107286/",
+        "alts": {
+          "phone": "Telephone Icon",
+          "email": "Mail Icon",
+          "link_github": "GitHub Icon",
+          "link_linkedin": "Linkedin Icon"
+        }
       }
     }
   },

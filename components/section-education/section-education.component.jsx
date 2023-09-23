@@ -36,21 +36,21 @@ const SectionEducation = () => {
 
   };
   return (
-    <div className="tab-container">
+    <section className="education-container">
       {topics.map((topic, index) => (
-        <div className={`tab ${activeTab === index ? "active" : ""}`} key={index}>
+        <div className={`education-tab ${activeTab === index ? "active" : ""}`} key={index}>
           <button
             onClick={() => handleTabClick(index)}
-            className={`tab-button ${activeTab === index ? "active" : ""}`}
+            className={`education-tab-button ${activeTab === index ? "active" : ""}`}
           >
             <h4>{topic.title}</h4>
           </button>
-          <div className={`tab-content ${activeTab === index ? "active" : ""}`}>
+          <div className={`education-tab-content ${activeTab === index ? "active" : ""}`}>
             <p>{topic.content}</p>
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 
