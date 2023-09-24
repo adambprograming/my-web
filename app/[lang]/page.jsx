@@ -12,6 +12,7 @@ import { LanguageContext } from "../../context/lang.context";
 // Components
 import SectionEducation from "../../components/section-education/section-education.component";
 import SectionContact from "../../components/section-contact/section-contact.component";
+import SectionTechstack from "../../components/section-techstack/section-techstack.component";
 
 export default function Home() {
   const { languageDict } = useContext(LanguageContext);
@@ -35,7 +36,7 @@ export default function Home() {
         <SectionEducation />
       </article>
       <article id="article-techstack">
-        <div></div>
+        <SectionTechstack />
         <aside className="aside-techstack">{languageDict.article_techstack.aside}</aside>
       </article>
       <article id="article-contact">

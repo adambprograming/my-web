@@ -18,7 +18,8 @@
       "education": "VZDĚLÁNÍ",
       "techstack": "TECHSTACK",
       "contact": "KONTAKT"
-  }},
+    }
+  },
   "article_hero": {
     "main": {
       "name": "ADAM BARTŮŠEK,",
@@ -29,25 +30,25 @@
   },
   "article_education": {
     "aside": "V\nZ\nD\nĚ\nL\nÁ\nN\nÍ",
-    "main": {
-      "highschool": {
+    "main": [
+      {
         "title": "Střední škola",
         "content": "Pominu-li 2. stupeň v matematické třídě, tak můj zájem k technickým oborům a IT začal na Střední škole elektrotechnické v Pardubicích (SPŠE), kde jsem studoval Komunikační technologie. Právě tady jsem se poprvé setkal s programováním, nejvíce s backendem (Java) a mikroprocesorovou technikou (Arduino), ale také trochu s frontendem, tedy tvorbou webů a webových aplikací."
       },
-      "university": {
+      {
         "title": "Univerzita",
         "content": "Pro své další studium jsem si vybral UHK, fakultu FIM, obor Informační management. Aktuálně studuji bakalářské studium a plánuji pokračovat na magisterské ve stejném oboru. I zde jsem se přiblížil k programování (html, css, javascript, java a práce s databázemi). Znalosti získané s povinných předmětů mi úplně nestačili a proto jsem se začal učit ve volném čase sám."
       },
-      "selfeducation": {
+      {
         "title": "Sebevzdělání",
         "content": "Nejprve jsem se chtěl seznámit s backendem, protože mě zajímalo jak to všechno funguje, proto jsem se rok učil python. Poté jsem si chtěl alespoň trochu doplnit znalosti z front-endu a umět full-stack, ale u front-endu jsem nakonec zůstal a poslední rok se v něm snažím zlepšovat. Primárně se snažím zlepšovat v reactu/nextu a psát kvalitní čitelný kód."
       }
-    }
+    ]
   },
   "article_techstack": {
     "aside": "T\nE\nC\nH\nS\nT\nA\nC\nK",
-    "main": {
-      "1": {
+    "main": [
+      {
         "title": "HTML5, CSS3 & Sass",
         "content": "S HTML i CSS jsem se setkal již na základní škole a dnes je pro mě samozřejmostí oboje. Poslední dobou se s čistým HTML ani CSS nesetkávám. HTML píšu skrze JSX v Reactu a spíše než obyčejné CSS využívám preprocesor scss/sass. Ve všech třech kurzech souvisejících s programování bylo HTML i CSS, od základů až do pokročilých principů.",
         "projects": {
@@ -55,7 +56,7 @@
           "content": "10+"
         }
       },
-      "2": {
+      {
         "title": "Javascript",
         "content": "Javascript je pro mě další ze základů, i když jsem se s ním setkal spíše až ke konci střední školy/začátku vysoké. V obouch kurzech zaměřených na front-end jsem se javascript učil, takže jazyk jako takový znám a rozumím mu. Nejspíše jsem se až moc rychle pustil do frameworku (React) a proto se stále ještě určité pricipy javascriptu učím za pochodu.",
         "projects": {
@@ -63,7 +64,7 @@
           "content": "5"
         }
       },
-      "3": {
+      {
         "title": "React",
         "content": "Rozhodování mezi frameworky React a Angular pro mě bylo trochu složitější, ale nakonec jsem zvolil React a zpětně mi to přijde jako skvělá volba. Poprvé jsem se s Reactem setkal ve svém první FrontEnd kurzu a ještě než jsem ho kompletně dodělal, pořídil jsem kurz specializovaný na React, Redux a Typescript, který jestě dodělávám, protože nyní čas věnuji spíše reálným projektům.",
         "projects": {
@@ -71,7 +72,7 @@
           "content": "2"
         }
       },
-      "4": {
+      {
         "title": "Next.js",
         "content": "Next.js pro mě nebyl až tak jednoznačnou volbou hlavně kvůli Pages router, který mi není zdaleka tak sympatický jako poměrně nový App router, ale jakmile se uvedl do provozu a už není jen v 'testovací verzi' tak začal využívat pouze Next a rád bych v něm pokračoval, i když samozřejmě nemám problém se naučit i jiný framework.",
         "projects": {
@@ -79,7 +80,7 @@
           "content": "2"
         }
       },
-      "5": {
+      {
         "title": "Git & GitHub",
         "content": "Git a GitHub jsou pro mě určite základy a s Control Version se snažím pracovat na denní bázi, vždy každou úpravu kódu mít aktivně na githubu. Vím, že v každé firmě se s GitHubem pracuje a proto považuji tuto dovednost za nezbytnou. Git a GitHub jsem měl ve všech třech kurzech a setkávám se s tím v každém projektu a videu z kterých se učím.",
         "projects": {
@@ -87,7 +88,7 @@
           "content": "10+"
         }
       },
-      "6": {
+      {
         "title": "Python",
         "content": "Původně jsem v pythonu viděl svoji programátorskou budoucnost, ale po větším poznání front-endu mě zaujalo dělat spíše něco co je více vidět. I přesto jsem měl Python velice rád a absolvoval jsem celý 100 denní kurz na Udemy, který mi trval skoro rok. V kurzu jsem se dostal od hry hangman, přes práci s knihovnami (NumPy, Matplotlib, SciPy, atd.), až po základy AI.",
         "projects": {
@@ -95,6 +96,18 @@
           "content": "10+"
         }
       }
+    ],
+    "alts": {
+      "html": "HTML5 Ikona",
+      "css": "CSS3 Ikona",
+      "sass": "Sass Ikona",
+      "js": "Javascript Ikona",
+      "react": "React Ikona",
+      "nextjs": "NextJs Ikona",
+      "git": "Git Ikona",
+      "github": "GitHub Ikona",
+      "python": "Python Ikona",
+      "figma": "Figma Ikona"
     }
   },
   "article_contact": {
@@ -135,7 +148,7 @@
       }
     }
   },
-  "article_footer":{
+  "article_footer": {
     "copyright": "Copyright © 2023 Adam Bartůšek. Všechna práva vyhrazena."
   }
 }

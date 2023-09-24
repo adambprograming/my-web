@@ -29,25 +29,25 @@
   },
   "article_education": {
     "aside": "E\nD\nU\nC\nA\nT\nI\nO\nN",
-    "main": {
-      "highschool": {
+    "main": [
+      {
         "title": "High school",
         "content": "Apart from 2nd grade math class, my interest in technical subjects and IT started at the Secondary School of Electrical Engineering in Pardubice (SPŠE), where I studied Communication Technology. It was here where I first encountered programming, mostly with the backend (Java) and microprocessor technology (Arduino), but also a bit with the front-end, i.e. creating websites and web applications."
       },
-      "university": {
+      {
         "title": "University",
         "content": "For my further studies, I decided to study at UHK, FIM faculty, field of study Information Management. I am currently studying for a Bachelor's degree and I plan to continue my Master's degree in the same field. Here I also approached programming (html, css, javascript, java, and database work). The knowledge I gained from the mandatory classes wasn't quite enough, so I started learning on my own in my free time."
       },
-      "selfeducation": {
+      {
         "title": "Selfeducation",
         "content": "First I wanted to learn about the backend because I was interested in how it all works, so I spent a year learning Python. After that, I wanted to at least get some knowledge of the front-end and learn full-stack, but I ended up staying with the front-end and I've been trying to get better at it for the last year. Primarily I'm trying to improve in react/next and write good quality readable code."
       }
-    }
+    ]
   },
   "article_techstack": {
     "aside": "T\nE\nC\nH\nS\nT\nA\nC\nK",
-    "main": {
-      "1": {
+    "main": [
+      {
         "title": "HTML5, CSS3 & Sass",
         "content": "I was introduced to HTML and CSS in elementary school and today I am familiar with both. Lately, I have not encountered pure HTML or CSS. I write HTML through JSX in React and use the scss/sass preprocessor rather than plain CSS. All three programming related courses have included both HTML and CSS, from the basics to advanced functions.",
         "projects": {
@@ -55,7 +55,7 @@
           "content": "10+"
         }
       },
-      "2": {
+      {
         "title": "Javascript",
         "content": "Javascript is another of the basics for me, although I didn't encounter it until the end of high school/beginning of college. I learned javascript in both of my front-end focused courses, so I know and understand the language itself. I was probably too quick to get into the framework (React), and therefore I'm still learning some javascript principles as I go along.",
         "projects": {
@@ -63,7 +63,7 @@
           "content": "5"
         }
       },
-      "3": {
+      {
         "title": "React",
         "content": "Deciding between the React and Angular frameworks was a bit more difficult for me, but in the end, I chose React and in retrospect, it seems like a great choice. I first encountered React in my first FrontEnd course and before I finished it completely I took a course specialized in React, Redux and Typescript, which I'm still finishing because now I'm spending my time more on real projects.",
         "projects": {
@@ -71,7 +71,7 @@
           "content": "2"
         }
       },
-      "4": {
+      {
         "title": "Next.js",
         "content": "Next.js wasn't such a clear choice for me mainly because of Pages router, which I don't like nearly as much as the relatively new App router, but once it went live and is no longer in 'test version' I started using only Next and would like to continue using it, though of course, I have no problem learning another framework.",
         "projects": {
@@ -79,7 +79,7 @@
           "content": "2"
         }
       },
-      "5": {
+      {
         "title": "Git & GitHub",
         "content": "Git and GitHub are definitely the basics for me, and I tend to work with Control Version on a daily basis, always having every code commit active on GitHub. I know that every company works with GitHub, so I consider this skill to be essential. I've had Git and GitHub in all three of my courses and I encounter it in every project and video I learn from.",
         "projects": {
@@ -87,7 +87,7 @@
           "content": "10+"
         }
       },
-      "6": {
+      {
         "title": "Python",
         "content": "I initially saw python as my future as a programmer, but after learning more about the front-end, I was more interested in doing something more visible. I still liked Python a lot and I took the entire 100 day course on Udemy, which took me almost a year. The course took me from playing hangman, through working with libraries (NumPy, Matplotlib, SciPy, etc), all the way to the basics of AI.",
         "projects": {
@@ -95,6 +95,18 @@
           "content": "10+"
         }
       }
+    ],
+    "alts": {
+      "html": "HTML5 Icon",
+      "css": "CSS3 Icon",
+      "sass": "Sass Icon",
+      "js": "Javascript Icon",
+      "react": "React Icon",
+      "nextjs": "NextJs Icon",
+      "git": "Git Icon",
+      "github": "GitHub Icon",
+      "python": "Python Icon",
+      "figma": "Figma Icon"
     }
   },
   "article_contact": {

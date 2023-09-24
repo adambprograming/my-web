@@ -43,3 +43,15 @@ h6 {
     font-size: 1.6rem;
     font-family: 'Gemunu Libre', sans-serif;
 }
+
+.g-enable-text-selection {
+    -webkit-user-select: text; /* Safari */
+    -ms-user-select: text; /* IE 10 and IE 11 */
+    user-select: text; /* Standard syntax */
+}
+
+* {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}

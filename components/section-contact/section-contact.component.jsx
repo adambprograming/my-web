@@ -1,16 +1,16 @@
 // Styles
 import './section-contact.styles.scss'
-// Public & Assets
-import IconTel from "../svgs/contact_tel.component";
-import IconMail from "../svgs/contact_mail.component";
-import IconGithub from "../svgs/contact_github.component";
-import IconLinkedin from "../svgs/contact_linkedin.component";
 // Next Functions
 import Link from 'next/link';
 // React Functions
 import { useContext } from "react";
 // Context
 import { LanguageContext } from "../../context/lang.context";
+// Components
+import IconTel from "../svgs/contact_tel.component";
+import IconMail from "../svgs/contact_mail.component";
+import IconGithub from "../svgs/contact_github.component";
+import IconLinkedin from "../svgs/contact_linkedin.component";
 
 const SectionContact = () => {
   const { languageDict } = useContext(LanguageContext)
@@ -26,10 +26,10 @@ const SectionContact = () => {
         <div className='contact-job-description'>
           <header className='contact-job-description-header'><h4>{languageDict.article_contact.main.job_demand.title}</h4></header>
           <ul className='contact-job-description-content'>
-            <li><h5>{languageDict.article_contact.main.job_demand.content[1].title}</h5><p>{languageDict.article_contact.main.job_demand.content[1].description}</p></li>
-            <li><h5>{languageDict.article_contact.main.job_demand.content[2].title}</h5><p>{languageDict.article_contact.main.job_demand.content[2].description}</p></li>
-            <li><h5>{languageDict.article_contact.main.job_demand.content[3].title}</h5><p>{languageDict.article_contact.main.job_demand.content[3].description}</p></li>
-            <li><h5>{languageDict.article_contact.main.job_demand.content[4].title}</h5><p>{languageDict.article_contact.main.job_demand.content[4].description}</p></li>
+            <li><h5 className='g-enable-text-selection'>{languageDict.article_contact.main.job_demand.content[1].title}</h5><p className='g-enable-text-selection'>{languageDict.article_contact.main.job_demand.content[1].description}</p></li>
+            <li><h5 className='g-enable-text-selection'>{languageDict.article_contact.main.job_demand.content[2].title}</h5><p className='g-enable-text-selection'>{languageDict.article_contact.main.job_demand.content[2].description}</p></li>
+            <li><h5 className='g-enable-text-selection'>{languageDict.article_contact.main.job_demand.content[3].title}</h5><p className='g-enable-text-selection'>{languageDict.article_contact.main.job_demand.content[3].description}</p></li>
+            <li><h5 className='g-enable-text-selection'>{languageDict.article_contact.main.job_demand.content[4].title}</h5><p className='g-enable-text-selection'>{languageDict.article_contact.main.job_demand.content[4].description}</p></li>
           </ul>
         </div>
         <div className='contact-contacts'>

@@ -10,22 +10,7 @@ import { LanguageContext } from "../../context/lang.context";
 const SectionEducation = () => {
   const [activeTab, setActiveTab] = useState();
   const { languageDict } = useContext(LanguageContext)
-
-  const topics = [
-    {
-      title: languageDict.article_education.main.highschool.title,
-      content: languageDict.article_education.main.highschool.content,
-    },
-    {
-      title: languageDict.article_education.main.university.title,
-      content: languageDict.article_education.main.university.content,
-    },
-    {
-      title: languageDict.article_education.main.selfeducation.title,
-      content: languageDict.article_education.main.selfeducation.content,
-    },
-  ];
-  
+  const topics = languageDict.article_education.main
 
   const handleTabClick = (index) => {
     if (index == activeTab){
@@ -33,8 +18,8 @@ const SectionEducation = () => {
     } else {
         setActiveTab(index);
     }
-
   };
+
   return (
     <section className="education-container">
       {topics.map((topic, index) => (
@@ -46,7 +31,7 @@ const SectionEducation = () => {
             <h4>{topic.title}</h4>
           </button>
           <div className={`education-tab-content ${activeTab === index ? "active" : ""}`}>
-            <p>{topic.content}</p>
+            <p className="g-enable-text-selection">{topic.content}</p>
           </div>
         </div>
       ))}

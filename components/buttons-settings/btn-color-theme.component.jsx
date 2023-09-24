@@ -32,8 +32,8 @@ const ColorThemeBtn = () => {
     <label className="switch" aria-label={languageDict.article_header.buttons.button_themes_aria_label}>
         <input type="checkbox" onClick={switchTheme}/>
         <span className="slider"></span>
-        <Image className='left-image' src={IconDay} alt={languageDict.article_header.buttons.icon_light_theme_alt} />
-        <Image className='right-image' src={IconNight} alt={languageDict.article_header.buttons.icon_dark_theme_alt} />
+        <Image className='left-icon-btn' src={IconDay} alt={languageDict.article_header.buttons.icon_light_theme_alt} />
+        <Image className='right-icon-btn' src={IconNight} alt={languageDict.article_header.buttons.icon_dark_theme_alt} />
     </label>
   );
 };

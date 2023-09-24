@@ -1,0 +1,15 @@
+.techstack-container{
+    margin-left: 12.5%;
+    .techstack-tab{
+        .techstack-menu{
+            & > *{
+                display: flex;
+                flex-direction: column;
+                & > *{
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+        }
+    }
+}

@@ -1,25 +1,33 @@
 "use client";
 // Styles
-import './header.styles.scss'
-// Public & Assets
-import LogoLightTheme from "../../public/logo_light.svg";
-import LogoDarkTheme from "../../public/logo_dark.svg";
+import "./header.styles.scss";
 // Next Functions
-import Image from "next/image";
-import Link from "next/link";
+import { redirect } from "next/navigation";
 // React Functions
 import { useContext } from "react";
 // Context
-import { ColorThemeContext } from "../../context/color-theme.context";
 import { LanguageContext } from "../../context/lang.context";
 // Componenets
 import ColorThemeBtn from "../buttons-settings/btn-color-theme.component";
 import LanguageBtn from "../buttons-settings/btn-lang.component";
-import MenuDropdown from '../menu-dropdown/menu-dropdown.component';
+import MenuDropdown from "../menu-dropdown/menu-dropdown.component";
+import IconLogo from "../svgs/logo.component";
 
 const Header = () => {
   const { languageDict } = useContext(LanguageContext);
-  const { isDarkTheme } = useContext(ColorThemeContext);
+  const handleLogoClick = () => {
+    if (languageDict.lang == "en") {
+      // Change URL without re-render
+      window.history.pushState('EN', undefined, '/en')
+      // redirect to new URL without re-render
+      redirect('/en', 'replace');
+    } else {
+      // Change URL without re-render
+      window.history.pushState('CZ', undefined, '/cz')
+      // redirect to new URL without re-render
+      redirect('/cz', 'replace')
+    }
+  }
   return (
     <header className="article-header">
       <div className="container-button">
@@ -27,17 +35,11 @@ const Header = () => {
         <LanguageBtn />
       </div>
       <div className="container-logo">
-        {isDarkTheme ? (
-          <Image
-            src={LogoDarkTheme}
-            alt={languageDict.article_header.logo_alt}
-          />
-        ) : (
-          <Image
-            src={LogoLightTheme}
-            alt={languageDict.article_header.logo_alt}
-          />
-        )}
+        <IconLogo
+          className="logo-icon"
+          alt={languageDict.article_header.logo_alt}
+          onClick={handleLogoClick}
+        />
       </div>
       <MenuDropdown />
     </header>
