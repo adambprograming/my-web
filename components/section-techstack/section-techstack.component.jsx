@@ -11,6 +11,7 @@ import IconGit from "../../public/techstack_git.svg";
 import IconGithub from "../../public/techstack_github.svg";
 import IconPython from "../../public/techstack_python.svg";
 import IconFigma from "../../public/techstack_figma.svg";
+import IconTs from "../../public/techstack_ts.svg"
 // Next Functions
 import Image from "next/image";
 // React Functions
@@ -20,63 +21,49 @@ import { useState } from "react";
 import { LanguageContext } from "../../context/lang.context";
 
 const SectionTechstack = () => {
-  const [activeTab, setActiveTab] = useState(1);
+  const [activeTab, setActiveTab] = useState(0);
   const { languageDict } = useContext(LanguageContext);
+  const alts = languageDict.article_techstack.alts
   const topics = languageDict.article_techstack.main;
-//   const icons = [
-//     IconHtml,
-//     IconCss,
-//     IconSass,
-//     IconJs,
-//     IconReact,
-//     IconNextjs,
-//     IconGit,
-//     IconGithub,
-//     IconPython,
-//     IconFigma,
-//   ];
-  const handleTabClick = (index) => {
-    if (index == activeTab) {
-      setActiveTab();
-    } else {
-      setActiveTab(index);
-    }
-  };
 
   return (
     <section className="techstack-container">
       <div className="techstack-tab">
         <div className="techstack-menu">
-          <button>
-            <Image src={IconHtml} alt={languageDict.article_techstack.alts.html} />
-            <Image src={IconCss} alt={languageDict.article_techstack.alts.css} />
-            <Image src={IconSass} alt={languageDict.article_techstack.alts.sass} />
-          </button>
-          <button>
-            <Image src={IconJs} alt={languageDict.article_techstack.alts.js} />
-          </button>
-          <button>
-            <Image src={IconReact} alt={languageDict.article_techstack.alts.react} />
-          </button>
-          <button>
-            <Image src={IconNextjs} alt={languageDict.article_techstack.alts.nextjs} />
-          </button>
-          <button>
-            <Image src={IconGit} alt={languageDict.article_techstack.alts.git} />
-            <Image src={IconGithub} alt={languageDict.article_techstack.alts.github} />
-          </button>
-          <button>
-            <Image src={IconPython} alt={languageDict.article_techstack.alts.python} />
-          </button>
-          <button>
-            <Image src={IconFigma} alt={languageDict.article_techstack.alts.figma} />
-          </button>
+          <span className={`techstack-slider slider-${activeTab}`}></span>
+          <label onClick={() => setActiveTab(0)}>
+            <Image src={IconHtml} alt={alts.html} />
+            <Image src={IconCss} alt={alts.css} />
+            <Image src={IconSass} alt={alts.sass} />
+          </label>
+          <label onClick={() => setActiveTab(1)}>
+            <Image src={IconJs} alt={alts.js} />
+          </label>
+          <label onClick={() => setActiveTab(2)}>
+            <Image src={IconReact} alt={alts.react} />
+          </label>
+          <label onClick={() => setActiveTab(3)}>
+            <Image src={IconNextjs} alt={alts.nextjs} />
+          </label>
+          <label onClick={() => setActiveTab(4)}>
+            <Image src={IconGit} alt={alts.git} />
+            <Image src={IconGithub} alt={alts.github} />
+          </label>
+          <label onClick={() => setActiveTab(5)}>
+            <Image src={IconPython} alt={alts.python} />
+          </label>
+          <label onClick={() => setActiveTab(6)}>
+            <Image src={IconFigma} alt={alts.figma} />
+          </label>
+          <label onClick={() => setActiveTab(7)}>
+            <Image src={IconTs} alt={alts.ts} />
+          </label>
         </div>
       </div>
       {/* {topics.map((topic, index) => (
         <div className={`education-tab ${activeTab === index ? "active" : ""}`} key={index}>
           <button
-            onClick={() => handleTabClick(index)}
+            onClick={() => setActiveTab(index)}
             className={`education-tab-button ${activeTab === index ? "active" : ""}`}
           >
             <h4>{topic.title}</h4>
