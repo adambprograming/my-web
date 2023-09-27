@@ -94,6 +94,22 @@
           "title": "PROJECTS",
           "content": "10+"
         }
+      },
+      {
+        "title": "Figma",
+        "content": "DOPLNIT",
+        "projects": {
+          "title": "PROJECTS",
+          "content": "3"
+        }
+      },
+            {
+        "title": "Typescript",
+        "content": "DOPLNIT",
+        "projects": {
+          "title": "PROJECTS",
+          "content": "0"
+        }
       }
     ],
     "alts": {
