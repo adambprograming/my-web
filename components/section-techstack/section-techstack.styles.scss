@@ -8,6 +8,8 @@
   background-size: cover;
   background-position: 15%;
   border-radius: 20px;
+  max-height: 49.5rem;
+  overflow: hidden;
   .techstack-menu {
     background-color: var(--secondary-color);
     border-radius: 20px;
@@ -166,8 +168,8 @@
     }
   }
   .techstack-content{
+
     padding: 0rem 1.5rem;
-    overflow-y: hidden;
     color: var(--text-reverse-color);
     h4:first-of-type{
         margin-bottom: 1rem;

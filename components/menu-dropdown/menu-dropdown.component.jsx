@@ -2,20 +2,15 @@
 // Styles
 import './menu-dropdown.styles.scss'
 // React Functions
-import { useContext } from 'react';
-import { useState } from "react";
+import { useContext, useState } from 'react';
 // Context
 import { LanguageContext } from "../../context/lang.context";
-import { ColorThemeContext } from '../../context/color-theme.context';
 
 const MenuDropdown = () => {
   const [activeMenu, setActiveMenu] = useState(false);
     const { languageDict } = useContext(LanguageContext)
-    const { isDarkTheme } = useContext(ColorThemeContext)
     const handleMenuClick = () => {
         setActiveMenu(!activeMenu);
-      
-  
     };
     return (
     <nav className='container-menu'>

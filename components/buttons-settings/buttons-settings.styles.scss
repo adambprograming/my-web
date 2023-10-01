@@ -57,21 +57,70 @@
     cursor: pointer;
 }
 
+// When the switch is hover, move the slider little bit to the right
 input:hover + .slider:before {
     -webkit-transform: translateX(3px);
     -ms-transform: translateX(3px);
     transform: translateX(3px);
 }
 
+// When the switch is checked and hover, move the slider little bit to the left
 input:checked:hover + .slider:before {
-    -webkit-transform: translateX(32.5px);
-    -ms-transform: translateX(32.5px);
-    transform: translateX(32.5px);
+    -webkit-transform: translateX(33px);
+    -ms-transform: translateX(33px);
+    transform: translateX(33px);
 }
 
-/* When the switch is checked, move the slider to the right */
+// When the switch is checked, move the slider to the right
 input:checked + .slider:before {
-    -webkit-transform: translateX(35.5px);
-    -ms-transform: translateX(35.5px);
-    transform: translateX(35.5px);
+    -webkit-transform: translateX(36px);
+    -ms-transform: translateX(36px);
+    transform: translateX(36px);
+}
+
+/* The slider background color animation */
+.slider-en {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ACB5F6; /* Initial background color */
+    transition: background-color 0.4s;
+    border-radius: 34px;
+}
+
+.slider-en:before {
+    position: absolute;
+    content: "";
+    height: 35px;
+    width:35px;
+    left: 35.5px;
+    bottom: 0px;
+    background-color: #1E2DB8;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+// When the switch is hover, move the slider little bit to the right
+input:hover + .slider-en:before {
+    -webkit-transform: translateX(-3px);
+    -ms-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+
+// When the switch is checked and hover, move the slider little bit to the left
+input:checked:hover + .slider-en:before {
+    -webkit-transform: translateX(-33px);
+    -ms-transform: translateX(-33px);
+    transform: translateX(-33px);
+}
+
+// When the switch is checked, move the slider to the right
+input:checked + .slider-en:before {
+    -webkit-transform: translateX(-36px);
+    -ms-transform: translateX(-36px);
+    transform: translateX(-36px);
 }

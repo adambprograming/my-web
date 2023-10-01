@@ -18,6 +18,9 @@ export default function Home() {
   const { languageDict } = useContext(LanguageContext);
   return (
     <main className="main">
+      {/* <div id="globalLoader">
+          Loading...
+      </div> */}
       <article id="article-hero">
         <div className="content-container">
           <h5>{languageDict.article_hero.main.name}</h5>

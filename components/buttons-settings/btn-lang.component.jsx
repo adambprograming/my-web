@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 // React Functions
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 // Context
 import { LanguageContext } from "../../context/lang.context";
 
@@ -17,8 +17,12 @@ import { LanguageContext } from "../../context/lang.context";
 const LanguageBtn = () => {
   // Use Context
   const { languageDict, setLanguage, language } = useContext(LanguageContext);
+  const [initLang, setInitLang] = useState()
   // Get other parts of pathname then language ('cz'/'en')
   const pathname = usePathname().split("/").slice(2);
+  useEffect(() => {
+    setInitLang(document.documentElement.getAttribute('lang'))
+  }, [])
   // Create btn handler
   const switchLang = () => {
     if (language == "cz") {
@@ -45,7 +49,7 @@ const LanguageBtn = () => {
   return (
     <label className="switch" aria-label={languageDict.article_header.buttons.button_lang_aria_label} >
         <input type="checkbox" onClick={switchLang}/>
-        <span className="slider"></span>
+        <span className={`${initLang=='en' ? ('slider-en') : ('slider')}`}></span>
         <Image className="left-icon-btn" src={IconCz} alt={languageDict.article_header.buttons.icon_lang_cz_alt} />
         <Image className="right-icon-btn" src={IconEn} alt={languageDict.article_header.buttons.icon_lang_en_alt} />       
     </label>

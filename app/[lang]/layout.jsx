@@ -8,7 +8,7 @@ import { LanguageProvider } from "../../context/lang.context";
 // Components
 import Header from "../../components/header/header.component";
 import Footer from "../../components/footer/footer.component";
-
+import Loader from "../../components/loader/loader.component";
 
 export default function RootLayout({ children, params: { lang } }) {
   return (
@@ -18,6 +18,7 @@ export default function RootLayout({ children, params: { lang } }) {
         <meta name="description" content={lang == 'cz' ? ('Osobní webové stránky pro prezentaci') : ('Personal website for presentation')} />
       </head>
       <body suppressHydrationWarning={true}>
+        <Loader />
         <LanguageProvider lang={lang}>
           <ColorThemeProvider>
             <Header />

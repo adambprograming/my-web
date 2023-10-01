@@ -33,7 +33,7 @@
   }
 
   .dropdown-item h5:hover{
-    transform: scale(1.05) translate3d(0,0,0);
+    transform: scale(1.05) translate3d(1,0,0);
     color: var(--secondary-color);
 }
 
@@ -83,7 +83,6 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
     background-color: var(--text-color);
     border-radius: 3px;
 		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);
-    transition: background-color .2s ease-in-out;
   }
   .line-1 {
     animation: animate-line-1-rev .7s ease-in-out;
@@ -96,13 +95,13 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
     animation: animate-line-3-rev .7s ease-in-out;
   }
 
-  // &:hover {
-  //   .line-1,
-  //   .line-2, 
-  //   .line-3 {
-  //     background-color: #fff;
-  //   }
-  // }
+  &:hover {
+    .line-1,
+    .line-2, 
+    .line-3 {
+      background-color: var(--secondary-color);
+    }
+  }
 
   &.active {
     .line-1 {
@@ -115,6 +114,7 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
       animation: animate-line-3 .7s $cubic-bezier-in forwards;
     }
   }
+
 }
 
 .no-animation {
@@ -129,7 +129,6 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
   50% {
     transform: translate3d(0, $menu-icon-line-offsetY, 0) rotate(0);
   }
-
   100% {
     transform: translate3d(0, $menu-icon-line-offsetY, 0) rotate(45deg);
   }
@@ -153,7 +152,7 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
   }
 
   100% {
-    transform: translate3d(0, -$menu-icon-line-offsetY, 0) rotate(135deg);
+    transform: translate3d(0, -$menu-icon-line-offsetY, 0) rotate(-45deg);
   }
 }
 @keyframes animate-line-1-rev {
@@ -180,7 +179,7 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
 }
 @keyframes animate-line-3-rev {
   0% {
-    transform: translate3d(0, -$menu-icon-line-offsetY, 0) rotate(135deg);
+    transform: translate3d(0, -$menu-icon-line-offsetY, 0) rotate(-45deg);
   }
   50% {
     transform: translate3d(0, -$menu-icon-line-offsetY, 0) rotate(0);
