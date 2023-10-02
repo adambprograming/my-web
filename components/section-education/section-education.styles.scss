@@ -3,41 +3,40 @@
   flex-direction: column;
   width: 75%;
   margin-right: 12.5%;
-}
-
-.education-tab {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 10px 0px;
-}
-
-.education-tab.active{
-  background-color: var(--background-color);
-  border-radius: 20px;
-}
-
-.education-tab-button {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  border-radius: 20px;
-}
-
-.education-tab-button.active {
-  background-color: var(--secondary-color);
-}
-
-.education-tab-content {
-  text-align: center;
-  display: none;
-  padding: 5px 15px;
-}
-
-.education-tab-content.active {
-  display: block;
+  .education-tab {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: var(--background-color);
+    .education-tab-button {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      border-radius: 20px;
+      transition: background-color 0.8s;
+    }
+    .education-tab-button.active {
+      background-color: var(--secondary-color);
+      transition: background-color 0.5s;
+    }
+    .education-tab-content {
+      text-align: center;
+      padding: 5px 15px;
+    }
+    &:not(.active){
+      max-height: 54px;
+      transition: max-height 1s ease;
+    }
+    &.active{
+      max-height: 500px;
+      transition: max-height 1s ease;
+    }
+  }
 }
