@@ -1,0 +1,40 @@
+#scale-in-cards{
+  display: flex;
+  flex-direction: column;
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: var(--background-color);
+    .card-btn {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      border-radius: 20px;
+      transition: background-color 0.8s;
+      &.active{
+        background-color: var(--secondary-color);
+        transition: background-color 0.5s;
+      }
+    }
+    .card-content {
+      text-align: center;
+      padding: 5px 15px;
+    }
+    &:not(.active){
+      max-height: 54px;
+      transition: max-height 1s ease;
+    }
+    &.active{
+      max-height: 500px;
+      transition: max-height 1s ease;
+    }
+  }
+}

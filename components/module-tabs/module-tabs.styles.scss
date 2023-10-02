@@ -1,0 +1,198 @@
+#module-cards {
+  /*
+  Height is calculated as 25px (height of icon for mobile) * count of icons
+  + 20px (gap between icons) * count of icons minus one (if 10 icons it will be 9 gaps)
+  + 20px (10px needed for both top and bottom)
+  */
+  --height-tab-menu: 49.5rem;
+  /*
+  bg-image already with opacity and bg-image-color for
+  */
+  --bg-image: url("../../public/background_techstack.svg");
+  --bg-image-color: #29379e;
+  // Dont forget to edit slider-NUMBER as u need
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 20px;
+  max-height: var(--height-tab-menu);
+  overflow: hidden;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 15%;
+  .tab-menu {
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 4.5rem;
+    margin: 0rem;
+
+    height: var(--height-tab-menu);
+    .menu-slider {
+      position: absolute;
+      z-index: 0;
+      width: 4.5rem;
+      background-color: var(--bg-image-color);
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      -webkit-transition: transform 1.8s, height 1.8s;
+      transition: transform 1.8s, height 1.8s;
+      .bottom-or-left {
+        background: radial-gradient(
+          circle 20.2px at bottom left,
+          var(--secondary-color) 98%,
+          var(--bg-image-color)
+        );
+        width: 2rem;
+        height: 2.5rem;
+        position: absolute;
+        right: 0px;
+        bottom: -20px;
+        z-index: -4;
+      }
+      .top-or-right {
+        background: radial-gradient(
+          circle 20.2px at top left,
+          var(--secondary-color) 98%,
+          var(--bg-image-color)
+        );
+        width: 2rem;
+        height: 2.5rem;
+        position: absolute;
+        right: 0px;
+        top: -20px;
+        z-index: -4;
+      }
+      /*
+      every label must have unique slider-NUMBER class
+      height of each slider-NUMBER class count as 45px (25px icon + 10px*2 top&bottom space) * number of icons
+      when slider moves to each position it gets specific slider-NUMBER class, thats why there are exact numbers
+      */
+      &.slider-0 {
+        height: 135px;
+      }
+      &.slider-1 {
+        height: 45px;
+        -webkit-transform: translateY(135px);
+        -ms-transform: translateY(135px);
+        transform: translateY(135px);
+      }
+      &.slider-2 {
+        height: 45px;
+        -webkit-transform: translateY(180px);
+        -ms-transform: translateY(180px);
+        transform: translateY(180px);
+      }
+      &.slider-3 {
+        height: 45px;
+        -webkit-transform: translateY(225px);
+        -ms-transform: translateY(225px);
+        transform: translateY(225px);
+      }
+      &.slider-4 {
+        height: 90px;
+        -webkit-transform: translateY(270px);
+        -ms-transform: translateY(270px);
+        transform: translateY(270px);
+      }
+      &.slider-5 {
+        height: 45px;
+        -webkit-transform: translateY(360px);
+        -ms-transform: translateY(360px);
+        transform: translateY(360px);
+      }
+      &.slider-6 {
+        height: 45px;
+        -webkit-transform: translateY(405px);
+        -ms-transform: translateY(405px);
+        transform: translateY(405px);
+      }
+      &.slider-7 {
+        height: 45px;
+        -webkit-transform: translateY(450px);
+        -ms-transform: translateY(450px);
+        transform: translateY(450px);
+      }
+    }
+    .menu-slider-fix {
+      position: absolute;
+      width: 4.5rem;
+      height: 100%;
+      height: var(--height-tab-menu);
+      z-index: 0;
+      .bottom-or-left-overlap {
+        background-color: var(--background-color);
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        right: 0px;
+        bottom: -20px;
+      }
+      .top-or-right-overlap {
+        background-color: var(--background-color);
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        right: 0px;
+        top: -20px;
+      }
+      .top-or-right-corner {
+        background: radial-gradient(
+          circle 20.2px at bottom left,
+          transparent 98%,
+          var(--bg-image-color)
+        );
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+      .bottom-or-left-corner {
+        background: radial-gradient(
+          circle 20.2px at top left,
+          transparent 98%,
+          var(--bg-image-color)
+        );
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+      }
+    }
+    & > label {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin: 0rem;
+      &:first-of-type {
+        margin-top: auto;
+      }
+      &:last-of-type {
+        margin-bottom: auto;
+      }
+      & > * {
+        cursor: pointer;
+        height: 25px;
+        width: 25px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+  .tab-content {
+    padding: 0rem 1.5rem;
+    color: var(--text-reverse-color);
+    h4:first-of-type {
+      margin-bottom: 1rem;
+    }
+    h4:last-of-type {
+      margin-top: 1rem;
+    }
+  }
+}

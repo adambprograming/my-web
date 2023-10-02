@@ -113,19 +113,19 @@
         }
       }
     ],
-    "alts": {
-      "html": "HTML5 Ikona",
-      "css": "CSS3 Ikona",
-      "sass": "Sass Ikona",
-      "js": "Javascript Ikona",
-      "react": "React Ikona",
-      "nextjs": "NextJs Ikona",
-      "git": "Git Ikona",
-      "github": "GitHub Ikona",
-      "python": "Python Ikona",
-      "figma": "Figma Ikona",
-      "ts": "Typescript Ikona"
-    }
+    "alts": [
+      ["HTML5 Ikona",
+      "CSS3 Ikona",
+      "Sass Ikona"],
+      "Javascript Ikona",
+      "React Ikona",
+      "NextJs Ikona",
+      ["Git Ikona",
+      "GitHub Ikona"],
+      "Python Ikona",
+      "Figma Ikona",
+      "Typescript Ikona"
+    ]
   },
   "article_contact": {
     "aside": "K\nO\nN\nT\nA\nK\nT",
