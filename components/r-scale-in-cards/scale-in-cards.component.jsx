@@ -14,15 +14,15 @@ const ScaleInCards = ({topics}) => {
   // Everytime activeTab change, remove max-height of all non-active tabs and set max-height of active tab to exactly needed height
   useEffect(() => {
     // Remove max-height of all non-active tabs
-    document.querySelectorAll("#scale-in-cards .card:not(.active)").forEach((each) => {
+    document.querySelectorAll(".scale-in-cards .scale-in-card:not(.active)").forEach((each) => {
       each.style.removeProperty("max-height");
     });
     // If there is active tab, set max-height to scrollHeight
-    if (document.querySelector("#scale-in-cards .card.active")) {
+    if (document.querySelector(".scale-in-cards .scale-in-card.active")) {
       const height = document.querySelector(
-        "#scale-in-cards .card.active"
+        ".scale-in-cards .scale-in-card.active"
       ).scrollHeight;
-      document.querySelector("#scale-in-cards .card.active").style.maxHeight =
+      document.querySelector(".scale-in-cards .scale-in-card.active").style.maxHeight =
         height + "px";
     }
   }, [activeTab]);
@@ -36,10 +36,10 @@ const ScaleInCards = ({topics}) => {
     }
   };
   return (
-    <div id="scale-in-cards">
+    <div className="scale-in-cards">
       {topics.map((topic, index) => (
         <div
-          className={`card ${activeTab === index ? "active" : ""}`}
+          className={`scale-in-card ${activeTab === index ? "active" : ""}`}
           key={index}
         >
           {/* Button, onClick scale in content of card */}

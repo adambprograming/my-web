@@ -1,10 +1,12 @@
-#module-cards {
+.module-cards {
   /*
   Height is calculated as 25px (height of icon for mobile) * count of icons
   + 20px (gap between icons) * count of icons minus one (if 10 icons it will be 9 gaps)
   + 20px (10px needed for both top and bottom)
+  CHANGE only number-of-icons
   */
-  --height-tab-menu: 49.5rem;
+  --number-of-icons: 11;
+  --height-tab-menu: calc((var(--number-of-icons) * 2.5rem) + ((var(--number-of-icons) - 1) * 2rem) + 2rem);
   /*
   bg-image already with opacity and bg-image-color for
   */

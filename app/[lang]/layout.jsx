@@ -8,7 +8,7 @@ import { LanguageProvider } from "../../context/lang.context";
 // Components
 import Header from "../../components/header/header.component";
 import Footer from "../../components/footer/footer.component";
-import Loader from "../../components/loader/loader.component";
+import Loader from "../../components/r-loader/loader.component";
 
 export default function RootLayout({ children, params: { lang } }) {
   return (

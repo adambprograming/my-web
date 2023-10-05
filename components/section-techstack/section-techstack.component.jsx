@@ -18,7 +18,7 @@ import { useContext } from "react";
 // Context
 import { LanguageContext } from "../../context/lang.context";
 // Components
-import ModuleTabs from "../module-tabs/module-tabs.component";
+import ModuleTabs from "../r-module-tabs/module-tabs.component";
 
 
 const SectionTechstack = () => {

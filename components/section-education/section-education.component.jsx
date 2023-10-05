@@ -6,7 +6,7 @@ import { useContext } from "react";
 // Context
 import { LanguageContext } from "../../context/lang.context";
 // Componenets
-import ScaleInCards from "../scale-in-cards/scale-in-cards.component";
+import ScaleInCards from "../r-scale-in-cards/scale-in-cards.component";
 
 const SectionEducation = () => {
   const { languageDict } = useContext(LanguageContext)

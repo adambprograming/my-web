@@ -131,24 +131,24 @@
     "main": {
       "job_demand": {
         "title": "I'm looking for",
-        "content": {
-          "1": {
+        "content": [
+          {
             "title": "HALF-TIME",
-            "description": "I need a part-time job because I'm still studying"
+            "content": "I need a part-time job because I'm still studying"
           },
-          "2": {
+          {
             "title": "SELFT-IMPROVEMENT",
-            "description": "I am looking for a job where I can continuously improve my existing skills and learn new ones"
+            "content": "I am looking for a job where I can continuously improve my existing skills and learn new ones"
           },
-          "3": {
+          {
             "title": "LONGTERM",
-            "description": "I am not looking for a company where I just warm up for a few months, but I would like a stable background"
+            "content": "I am not looking for a company where I just warm up for a few months, but I would like a stable background"
           },
-          "4": {
+          {
             "title": "HYBRID",
-            "description": "I would like to find a job with the possibility of commuting to the office, where I will be able to pick up know-how from senior colleagues, but also have the possibility of complete full"
+            "content": "I would like to find a job with the possibility of commuting to the office, where I will be able to pick up know-how from senior colleagues, but also have the possibility of complete full"
           }
-        }
+        ]
       },
       "contact": {
         "phone": "+420778033073",

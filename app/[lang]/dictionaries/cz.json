@@ -104,7 +104,7 @@
           "content": "3"
         }
       },
-            {
+      {
         "title": "Typescript",
         "content": "DOPLNIT",
         "projects": {
@@ -132,24 +132,24 @@
     "main": {
       "job_demand": {
         "title": "Co hledám",
-        "content": {
-          "1": {
+        "content": [
+          {
             "title": "POLOVIČNÍ ÚVAZEK",
-            "description": "Rád bych našel práci na poloviční úvazek, kvůli studiu"
+            "content": "Rád bych našel práci na poloviční úvazek, kvůli studiu"
           },
-          "2": {
+          {
             "title": "SEBEROZVOJ",
-            "description": "Hledám práci v které budu moci stále zlepšovat své dosavadní dovednosti a učit se novým věcem"
+            "content": "Hledám práci v které budu moci stále zlepšovat své dosavadní dovednosti a učit se novým věcem"
           },
-          "3": {
+          {
             "title": "DLOUHODOBÁ SPOLUPRÁCE",
-            "description": "Nehledám firmu, kde se ohřeji na pár měsíců, ale rád bych stabilní zázemí"
+            "content": "Nehledám firmu, kde se ohřeji na pár měsíců, ale rád bych stabilní zázemí"
           },
-          "4": {
+          {
             "title": "HYBRID",
-            "description": "Rád bych našel práci s možností dojíždění do kanceláře, kde budu mít možnost pochytit know-how od senior kolegů, ale zároveň mít do budoucna možnost úplného remote"
+            "content": "Rád bych našel práci s možností dojíždění do kanceláře, kde budu mít možnost pochytit know-how od senior kolegů, ale zároveň mít do budoucna možnost úplného remote"
           }
-        }
+        ]
       },
       "contact": {
         "phone": "+420778033073",

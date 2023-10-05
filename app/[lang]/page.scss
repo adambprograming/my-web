@@ -33,7 +33,10 @@
   .aside-education{
     position: relative;
     font-family: 'Gemunu Libre';
-    margin: -2rem 1%;
+    width: 12.5%;
+    margin: -2rem 0%;
+    left: -0.5rem;
+    letter-spacing: -1rem;
     white-space: pre-wrap;
     font-size: 8rem;
     line-height: 100%;
@@ -49,8 +52,11 @@
   .aside-techstack{
     position: relative;
     font-family: 'Gemunu Libre';
-    margin: -7.2rem 1% -2rem 1%;
+    width: 12.5%;
+    margin: -7.2rem 0% -2rem 0%;
     white-space: pre-wrap;
+    left: -0.5rem;
+    letter-spacing: -1rem;
     font-size: 8rem;
     line-height: 90%;
     color: var(--primary-color);
@@ -76,8 +82,10 @@
   .aside-contact{
     position: relative;
     font-family: 'Gemunu Libre';
-    margin: 0rem 1%;
-    padding: 4.5rem 0px;
+    width: 12.5%;
+    left: -0.5rem;
+    letter-spacing: -1rem;
+    margin: 4.5rem 0;
     white-space: pre-wrap;
     font-size: 8rem;
     line-height: 112%;

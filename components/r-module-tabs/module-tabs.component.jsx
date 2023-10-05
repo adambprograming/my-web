@@ -20,7 +20,7 @@ import { useState } from "react";
 const ModuleTabs = ({ topics, icons, alts }) => {
   const [activeTab, setActiveTab] = useState(0);
   return (
-    <div id="module-cards">
+    <div className="module-cards">
       {/* Menu */}
       <div className="tab-menu">
         {/* map throught iconSets and make X Images in each label */}
