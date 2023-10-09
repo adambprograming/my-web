@@ -25,15 +25,111 @@
         opacity: 1;
       }
       &.right{
-        transform: translateX(48%) translateY(-10px) scaleX(0) skewY(-20deg);
+        transform: translateX(50%) translateY(-10px) scaleX(0) skewY(-20deg);
         opacity: 0;
       }
       &.left{
-        transform: translateX(-48%) translateY(-10px) scaleX(0) skewY(20deg);
+        transform: translateX(-50%) translateY(-10px) scaleX(0) skewY(20deg);
         opacity: 0;
       }
       &.else{
         transform: translateX(0%) translateY(0px) scaleX(0);
+        opacity: 0;
+      }
+      &.active-2-1{
+        margin: 0;
+        position: relative;
+        transform: translateX(calc(50% + 5px)) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.active-2-2{
+        transform: translateX(calc(-50% - 5px)) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.right-2{
+        transform: translateX(calc(-100% - 10px)) translateY(-10px) scaleX(0) skewY(20deg);
+        opacity: 0;
+      }
+      &.left-2{
+        transform: translateX(calc(100% + 10px)) translateY(-10px) scaleX(0) skewY(-20deg);
+        opacity: 0;
+      }
+      &.active-3-1{
+        margin: 0;
+        position: relative;
+        transform: translateX(calc(100% + 10px)) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.active-3-2{
+        transform: translateX(0%) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.active-3-3{
+        transform: translateX(calc(-100% - 10px)) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.right-3{
+        transform: translateX(calc(-150% - 15px)) translateY(-10px) scaleX(0) skewY(20deg);
+        opacity: 0;
+      }
+      &.left-3{
+        transform: translateX(calc(150% + 15px)) translateY(-10px) scaleX(0) skewY(-20deg);
+        opacity: 0;
+      }
+      &.active-4-1{
+        margin: 0;
+        position: relative;
+        transform: translateX(calc(150% + 15px)) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.active-4-2{
+        transform: translateX(calc(50% + 5px)) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.active-4-3{
+        transform: translateX(calc(-50% - 5px)) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.active-4-4{
+        transform: translateX(calc(-150% - 15px)) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.right-4{
+        transform: translateX(calc(-200% - 20px)) translateY(-10px) scaleX(0) skewY(20deg);
+        opacity: 0;
+      }
+      &.left-4{
+        transform: translateX(calc(200% + 20px)) translateY(-10px) scaleX(0) skewY(-20deg);
+        opacity: 0;
+      }
+      &.active-5-1{
+        margin: 0;
+        position: relative;
+        transform: translateX(calc(200% + 20px)) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.active-5-2{
+        transform: translateX(calc(100% + 10px)) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.active-5-3{
+        transform: translateX(0%) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.active-5-4{
+        transform: translateX(calc(-100% - 10px)) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.active-5-5{
+        transform: translateX(calc(-200% - 20px)) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.right-5{
+        transform: translateX(calc(-250% - 25px)) translateY(-10px) scaleX(0) skewY(20deg);
+        opacity: 0;
+      }
+      &.left-5{
+        transform: translateX(calc(250% + 25px)) translateY(-10px) scaleX(0) skewY(-20deg);
         opacity: 0;
       }
     }
