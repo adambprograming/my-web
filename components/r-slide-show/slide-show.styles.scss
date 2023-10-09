@@ -1,95 +1,59 @@
 .slide-show {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  flex: 20px;
   gap: 0.5rem;
   padding: 0.5rem;
   min-height: 21rem;
-  .slide-show-card{
+  .slides{
     display: flex;
-    margin: 0;
-    width: 20rem;
-    min-height: 20rem;
-    position: absolute;
-    &.else{
-      animation: slide 0s linear forwards;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    min-height: inherit;
+    .slide{
+      display: flex;
+      max-width: min-content;
+      position: absolute;
+      transition: transform 1s 0.1s, opacity 1s 0.1s;
+      &.active{
+        position: relative;
+        transform: translateX(0%) translateY(0px) scaleX(1);
+        opacity: 1;
+      }
+      &.right{
+        transform: translateX(48%) translateY(-10px) scaleX(0) skewY(-20deg);
+        opacity: 0;
+      }
+      &.left{
+        transform: translateX(-48%) translateY(-10px) scaleX(0) skewY(20deg);
+        opacity: 0;
+      }
+      &.else{
+        transform: translateX(0%) translateY(0px) scaleX(0);
+        opacity: 0;
+      }
     }
-    &.left:not(.active){
-      animation: slide-left 2s linear reverse forwards;
-    }
-    &.right:not(.active){
-      animation: slide-right 2s linear reverse forwards;
-    }
-    &.active{
-      position: relative;
-    }
-    &.right.active{
-      animation: slide-right 2s linear forwards;
-    }
-    &.left.active{
-      animation: slide-left 2s linear forwards;
-    }
-    // &.active{
-    //     position: relative;
-    //     &.right{
-    //       animation: slide-right 2s linear forwards;
-    //     }
-    //     &.left{
-    //       animation: slide-left 2s linear forwards;
-    //     }
-    // }
   }
   .left-arrow {
     min-width: 25px;
+    height: 50px;
     cursor: pointer;
     display: block;
     margin: auto 0;
     background-color: var(--text-color);
-    width: 25px;
-    height: 50px;
     clip-path: polygon(0 50%, 100% 0, 50% 50%, 100% 100%);
   }
   .right-arrow {
     min-width: 25px;
+    height: 50px;
     cursor: pointer;
     display: block;
     margin: auto 0;
     background-color: var(--text-color);
-    width: 25px;
-    height: 50px;
     clip-path: polygon(0 0, 100% 50%, 0 100%, 50% 50%);
-  }
-}
-
-@keyframes slide-right{
-  0%{
-    transform: scale(0) translateX(-20rem);
-    opacity: 0;
-  }
-  100%{
-    transform: scale(1), translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-left{
-  0%{
-    transform: scale(0) translateX(20rem);
-    opacity: 0;
-  }
-  100%{
-    transform: scale(1), translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slide{
-  0%{
-    transform: scale(1);
-    opacity: 1;
-  }
-  100%{
-    transform: scale(0);
-    opacity: 0;
   }
 }

@@ -8,6 +8,7 @@
     & > *{
         margin: 0;
         & > *{
+            min-width: 12ch;
             max-width: 20ch;
         }
     }
