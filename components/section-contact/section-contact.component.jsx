@@ -11,7 +11,7 @@ import IconTel from "../svgs/contact_tel.component";
 import IconMail from "../svgs/contact_mail.component";
 import IconGithub from "../svgs/contact_github.component";
 import IconLinkedin from "../svgs/contact_linkedin.component";
-import Carousel from '../r-slide-show/slide-show.component';
+import SlideShow from '../r-slide-show/slide-show.component';
 
 const SectionContact = () => {
   const { languageDict } = useContext(LanguageContext)
@@ -20,19 +20,13 @@ const SectionContact = () => {
     navigator.clipboard.writeText(languageDict.article_contact.main.contact.phone)
   }
   const copyMail = () => {
-    navigator.clipboard.writeText(languageDict.article_contact.main.contact.email)
+    navigator.clipboard.writeText(languageDict.article_contact.main.contact.email_copy)
   }
   return (
     <section className="contact-container">
         <div className='contact-job-description'>
           <header className='contact-job-description-header'><h4>{languageDict.article_contact.main.job_demand.title}</h4></header>
-          <Carousel arrows={true} useFullWidth={false} moreVisibleTabs={true} topics={topics} />
-          {/* <ul className='contact-job-description-content'>
-            <li><h5 className='g-enable-text-selection'>{topics[0].title}</h5><p className='g-enable-text-selection'>{topics[0].description}</p></li>
-            <li><h5 className='g-enable-text-selection'>{topics[1].title}</h5><p className='g-enable-text-selection'>{topics[1].description}</p></li>
-            <li><h5 className='g-enable-text-selection'>{topics[2].title}</h5><p className='g-enable-text-selection'>{topics[2].description}</p></li>
-            <li><h5 className='g-enable-text-selection'>{topics[3].title}</h5><p className='g-enable-text-selection'>{topics[3].description}</p></li>
-          </ul> */}
+          <SlideShow arrows={true} useFullWidth={false} moreVisibleTabs={true} topics={topics} />
         </div>
         <div className='contacts'>
           <div className='contact-contacts'>

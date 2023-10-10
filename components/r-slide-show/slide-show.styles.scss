@@ -5,7 +5,7 @@
   align-items: center;
   flex: 20px;
   gap: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   min-height: 21rem;
   .slides{
     display: flex;
@@ -134,22 +134,34 @@
       }
     }
   }
-  .left-arrow {
-    min-width: 25px;
-    height: 50px;
+  .left-arrow-btn{
     cursor: pointer;
-    display: block;
-    margin: auto 0;
-    background-color: var(--text-color);
-    clip-path: polygon(0 50%, 100% 0, 50% 50%, 100% 100%);
+    &:hover{
+      transition: transform 0.2s;
+      transform: scale(1.05);
+    }
+    .left-arrow {
+      min-width: 25px;
+      height: 50px;
+      display: block;
+      margin: auto 0;
+      background-color: var(--text-color);
+      clip-path: polygon(0 50%, 100% 0, 50% 50%, 100% 100%);
+    }
   }
-  .right-arrow {
-    min-width: 25px;
-    height: 50px;
+  .right-arrow-btn{
     cursor: pointer;
-    display: block;
-    margin: auto 0;
-    background-color: var(--text-color);
-    clip-path: polygon(0 0, 100% 50%, 0 100%, 50% 50%);
+    &:hover{
+      transition: transform 0.2s;
+      transform: scale(1.05);
+    }
+    .right-arrow {
+      min-width: 25px;
+      height: 50px;
+      display: block;
+      margin: auto 0;
+      background-color: var(--text-color);
+      clip-path: polygon(0 0, 100% 50%, 0 100%, 50% 50%);
+    }
   }
 }

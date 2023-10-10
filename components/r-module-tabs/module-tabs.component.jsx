@@ -1,4 +1,4 @@
-'use-client'
+"use-client";
 // Styles
 import "./module-tabs.styles.scss";
 // Next Functions
@@ -55,14 +55,14 @@ const ModuleTabs = ({ topics, icons, alts }) => {
       </div>
       {/* Content */}
       <div className="tab-content">
-        <h4 className="g-enable-text-selection">{topics[activeTab].title}</h4>
-        <p className="g-enable-text-selection">{topics[activeTab].content}</p>
-        <h4 className="g-enable-text-selection">
-          {topics[activeTab].projects.title}
-        </h4>
-        <h2 className="g-enable-text-selection">
-          {topics[activeTab].projects.content}
-        </h2>
+        {topics.map((topic, index) => (
+          <div className={`tab ${index === activeTab ? ('active') : ('')}`} key={index}>
+            <h4 className="g-enable-text-selection">{topic.title}</h4>
+            <p className="g-enable-text-selection">{topic.content}</p>
+            <h4 className="g-enable-text-selection">{topic.projects.title}</h4>
+            <h2 className="g-enable-text-selection">{topic.projects.content}</h2>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -9,7 +9,9 @@ const Loader = () => {
         if (typeof window !== 'undefined') {
           const loader = document.getElementById('splash-screen');
           if (loader)
-            loader.remove();
+            // loader.remove();
+            loader.classList.add('loaded')
+            setTimeout(() => {loader.remove()}, 500)
         }
       }, []);
   return (

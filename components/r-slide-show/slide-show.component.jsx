@@ -152,7 +152,9 @@ const SlideShow = ({ arrows, useFullWidth, swipe, moreVisibleTabs, topics }) => 
   }
   return (
     <div className={`slide-show`}>
-      {arrows && isSlideable && <span className="left-arrow" onClick={handleLeftArrow}></span>}
+      {arrows && isSlideable && 
+      <div className="left-arrow-btn" onClick={handleLeftArrow} ><span className="left-arrow" ></span></div>
+      }
       <div className="slides">
         {topics.map((topic, index) => (
           <Card
@@ -162,7 +164,9 @@ const SlideShow = ({ arrows, useFullWidth, swipe, moreVisibleTabs, topics }) => 
           />
         ))}
       </div>
-      {arrows && isSlideable && <span className="right-arrow" onClick={handleRightArrow}></span>}
+      {arrows && isSlideable && 
+      <div className="right-arrow-btn" onClick={handleRightArrow} ><span className="right-arrow" ></span></div>
+      }
     </div>
   );
 };
