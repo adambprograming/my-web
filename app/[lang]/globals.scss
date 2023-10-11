@@ -55,3 +55,33 @@ h6 {
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
 }
+
+@media only screen and (min-width: 850px){
+    p {
+        font-size: 2.1rem;
+    }
+    
+    h1 {
+        font-size: 11.87rem; 
+    }
+    
+    h2 {
+        font-size: 8.39rem;
+    }
+    
+    h3 {
+        font-size: 5.94rem;
+    }
+    
+    h4 {
+        font-size: 4.2rem;
+    }
+    
+    h5 {
+        font-size: 2.97rem;
+    }
+    
+    h6 {
+        font-size: 2.1rem;
+    }
+}

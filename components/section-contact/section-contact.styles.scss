@@ -22,16 +22,19 @@
         gap: 1rem;
         margin: 0;
         .contact-contacts{
-            width: 70%;
             display: flex;
-            flex-direction: column;
-            padding: 1rem 0rem;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: space-evenly;
+            flex-grow: 7;
             gap: 0.5rem;
+            padding: 0.5rem;
             background-color: var(--ascent-color-opacity-50);
             border-radius: 20px;
             border: 0.1rem solid var(--black-75);
             color: var(--secondary-color);
             .contact-tel{
+                margin: auto 0;
                 cursor: pointer;
                 &:hover{
                     transition: transform 0.2s;
@@ -45,6 +48,7 @@
                 }
             }
             .contact-mail{
+                margin: auto 0;
                 cursor: pointer;
                 &:hover{
                     transition: transform 0.2s;
@@ -63,14 +67,19 @@
             }
         }
         .contact-links{
-            width: 30%;
             margin: 0;
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: space-evenly;
+            flex-grow: 4;
+            gap: 0.5rem;
+            padding: 0.5rem;
             background-color: var(--ascent-color-opacity-50);
             border-radius: 20px;
             border: 0.1rem solid var(--black-75);
             & > *{
+                margin: 0;
                 & > *{
                     margin: auto;
                     width: 50px;
@@ -85,6 +94,18 @@
                     }
                 }
             }
+        }
+    }
+}
+@media only screen and (min-width: 850px) {
+    .contact-container{
+        flex-direction: row;
+        .contact-job-description{
+            flex-grow: 2;
+        }
+        .contacts{
+            flex-direction: column;
+            flex-grow: 1;
         }
     }
 }

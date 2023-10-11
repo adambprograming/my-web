@@ -25,6 +25,20 @@ const SlideShow = ({ arrows, useFullWidth, swipe, moreVisibleTabs, topics }) => 
   const lastElement = topics.length - 1;
   // Index of first element
   const firstElement = 0;
+  // This useEffect set minHeight to biggest height of all elements
+  useEffect(() => {
+    // Select all slides
+    const content = document.querySelectorAll('.slide')
+    const listOfHeights = []
+    // Use for index for all slides and push all heights to list above
+    for (let index = 0; index < numOfElements; index++) {
+      listOfHeights.push(content[index].scrollHeight)
+    }
+    // choose biggest height
+    const minHeight = Math.max(...listOfHeights)
+    // Set biggest height as min-height of slide-show
+    document.querySelector('.slide-show').style.minHeight = minHeight + 'px';
+  })
   // This useEffect listen for resize of window to change visibleTabs State
   useEffect(() => {
     if (moreVisibleTabs) {

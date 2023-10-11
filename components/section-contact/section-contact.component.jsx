@@ -26,7 +26,7 @@ const SectionContact = () => {
     <section className="contact-container">
         <div className='contact-job-description'>
           <header className='contact-job-description-header'><h4>{languageDict.article_contact.main.job_demand.title}</h4></header>
-          <SlideShow arrows={true} useFullWidth={false} moreVisibleTabs={true} topics={topics} />
+          <SlideShow arrows={true} useFullWidth={true} moreVisibleTabs={true} topics={topics} />
         </div>
         <div className='contacts'>
           <div className='contact-contacts'>
