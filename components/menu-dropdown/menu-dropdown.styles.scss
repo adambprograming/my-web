@@ -64,15 +64,15 @@ $cubic-bezier-in: cubic-bezier(0.30,1,0.70,1);
 $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
 
 .menu-icon {
-  width: 30px;
-  height: $menu-icon-height;
+  width: calc(30px * var(--multiplier));
+  height: calc($menu-icon-height * var(--multiplier));
   cursor: pointer;
   z-index: 50;
 
   .line-1,
   .line-2, 
   .line-3 {
-    height: $menu-icon-line-height;
+    height: calc($menu-icon-line-height * var(--multiplier));
     width: 100%;
     background-color: var(--text-color);
     border-radius: 3px;
@@ -82,7 +82,7 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
     animation: animate-line-1-rev .7s ease-in-out;
   }
   .line-2 {
-    margin: $menu-icon-line-space 0;
+    margin: calc($menu-icon-line-space * var(--multiplier)) 0;
     animation: animate-line-2-rev .7s ease-in-out;
   }
   .line-3 {
@@ -121,10 +121,10 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
     transform: translate3d(0, 0, 0) rotate(0deg);
   }
   50% {
-    transform: translate3d(0, $menu-icon-line-offsetY, 0) rotate(0);
+    transform: translate3d(0, calc($menu-icon-line-offsetY * var(--multiplier)), 0) rotate(0);
   }
   100% {
-    transform: translate3d(0, $menu-icon-line-offsetY, 0) rotate(45deg);
+    transform: translate3d(0, calc($menu-icon-line-offsetY * var(--multiplier)), 0) rotate(45deg);
   }
 }
 @keyframes animate-line-2 {
@@ -142,19 +142,19 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
     transform: translate3d(0, 0, 0) rotate(0deg);
   }
   50% {
-    transform: translate3d(0, -$menu-icon-line-offsetY, 0) rotate(0);
+    transform: translate3d(0, calc(-1 * $menu-icon-line-offsetY * var(--multiplier)), 0) rotate(0);
   }
 
   100% {
-    transform: translate3d(0, -$menu-icon-line-offsetY, 0) rotate(-45deg);
+    transform: translate3d(0, calc(-1 * $menu-icon-line-offsetY * var(--multiplier)), 0) rotate(-45deg);
   }
 }
 @keyframes animate-line-1-rev {
   0% {
-    transform: translate3d(0, $menu-icon-line-offsetY, 0) rotate(45deg);
+    transform: translate3d(0, calc($menu-icon-line-offsetY * var(--multiplier)), 0) rotate(45deg);
   }
   50% {
-    transform: translate3d(0, $menu-icon-line-offsetY, 0) rotate(0);
+    transform: translate3d(0, calc($menu-icon-line-offsetY * var(--multiplier)), 0) rotate(0);
   }
 
   100% {
@@ -173,13 +173,19 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
 }
 @keyframes animate-line-3-rev {
   0% {
-    transform: translate3d(0, -$menu-icon-line-offsetY, 0) rotate(-45deg);
+    transform: translate3d(0, calc(-1 * $menu-icon-line-offsetY * var(--multiplier)), 0) rotate(-45deg);
   }
   50% {
-    transform: translate3d(0, -$menu-icon-line-offsetY, 0) rotate(0);
+    transform: translate3d(0, calc(-1 * $menu-icon-line-offsetY * var(--multiplier)), 0) rotate(0);
   }
 
   100% {
     transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .nav{
+      --multiplier: 1.31;
   }
 }

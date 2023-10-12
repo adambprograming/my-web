@@ -7,6 +7,7 @@ import { redirect } from "next/navigation";
 import { useContext } from "react";
 // Context
 import { LanguageContext } from "../../context/lang.context";
+import { ResizeContext } from "../../context/resize.context";
 // Componenets
 import ColorThemeBtn from "../buttons-settings/btn-color-theme.component";
 import LanguageBtn from "../buttons-settings/btn-lang.component";
@@ -15,6 +16,7 @@ import IconLogo from "../svgs/logo.component";
 
 const Header = () => {
   const { languageDict } = useContext(LanguageContext);
+  const { windowWidth } = useContext(ResizeContext)
   const handleLogoClick = () => {
     if (languageDict.lang == "en") {
       // Change URL without re-render
@@ -36,6 +38,8 @@ const Header = () => {
       </div>
       <div className="container-logo">
         <IconLogo
+          width={`${windowWidth >= 850 ? (141) : (94)}`}
+          height={`${windowWidth >= 850 ? (133.5) : (89)}`}
           className="logo-icon"
           alt={languageDict.article_header.logo_alt}
           onClick={handleLogoClick}
