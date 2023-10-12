@@ -5,6 +5,7 @@ import "./layout.scss";
 // Context
 import { ColorThemeProvider } from "../../context/color-theme.context";
 import { LanguageProvider } from "../../context/lang.context";
+import { ResizeProvider } from "../../context/resize.context";
 // Components
 import Header from "../../components/header/header.component";
 import Footer from "../../components/footer/footer.component";
@@ -21,9 +22,11 @@ export default function RootLayout({ children, params: { lang } }) {
         <Loader />
         <LanguageProvider lang={lang}>
           <ColorThemeProvider>
-            <Header />
-            {children}
-            <Footer />
+            <ResizeProvider>
+              <Header />
+              {children}
+              <Footer />
+            </ResizeProvider>
           </ColorThemeProvider>
         </LanguageProvider>
       </body>

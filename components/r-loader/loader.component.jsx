@@ -6,13 +6,13 @@ import { useEffect } from 'react'
 
 const Loader = () => {
     useEffect(() => {
-        if (typeof window !== 'undefined') {
+        window.addEventListener('load',
+          () => {
           const loader = document.getElementById('splash-screen');
           if (loader)
-            // loader.remove();
             loader.classList.add('loaded')
-            setTimeout(() => {loader.remove()}, 500)
-        }
+            setTimeout(() => {loader.remove()}, 1000)
+          })
       }, []);
   return (
     <div id="splash-screen">

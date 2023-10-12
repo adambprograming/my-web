@@ -13,7 +13,7 @@ const MenuDropdown = () => {
         setActiveMenu(!activeMenu);
     };
     return (
-    <nav className='container-menu'>
+    <nav className='nav'>
       <div className="menu-icon" onClick={function() {
         document.getElementsByClassName('menu-icon').item(0).classList.toggle('active');
         document.getElementsByClassName('line-1').item(0).classList.remove('no-animation')

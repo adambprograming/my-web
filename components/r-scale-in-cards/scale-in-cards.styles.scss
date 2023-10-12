@@ -1,13 +1,14 @@
 .scale-in-cards{
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   .scale-in-card {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 10px 0px;
     overflow: hidden;
     border-radius: 20px;
+    position: relative;
     background-color: var(--background-color);
     .card-btn {
       background-color: var(--background-color);
@@ -25,20 +26,50 @@
       }
       &.active{
         background-color: var(--secondary-color);
-        transition: background-color 0.5s;
+        transition: background-color 1s;
       }
     }
     .card-content {
       text-align: center;
-      padding: 5px 15px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      background-color: var(--background-color);
+      overflow: hidden;
+      max-height: 0;
+      & > *{
+        margin: 0.5rem 1rem;
+      }
+      &:not(.active){
+        transition: max-height 1.8s ease;
+      }
+      &.active{
+        transition: max-height 1.8s ease;
+      }
     }
-    &:not(.active){
-      max-height: 54px;
-      transition: max-height 1s ease;
-    }
-    &.active{
-      max-height: 500px;
-      transition: max-height 1s ease;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .scale-in-cards{
+    flex-direction: row;
+    .scale-in-card {
+      .card-content{
+        animation: heightReset 0.01s forwards 1;
+        @keyframes heightReset {
+          from{
+            max-height: 0;
+          }
+          to{
+            max-height: fit-content;
+          }
+        }
+      }
+      .card-btn{
+        cursor: auto;
+        background-color: var(--secondary-color);
+        &:hover h4{
+        transform: scale(1);
+        }
+      }
     }
   }
 }

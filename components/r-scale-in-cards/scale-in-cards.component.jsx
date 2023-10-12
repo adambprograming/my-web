@@ -14,16 +14,16 @@ const ScaleInCards = ({topics}) => {
   // Everytime activeTab change, remove max-height of all non-active tabs and set max-height of active tab to exactly needed height
   useEffect(() => {
     // Remove max-height of all non-active tabs
-    document.querySelectorAll(".scale-in-cards .scale-in-card:not(.active)").forEach((each) => {
-      each.style.removeProperty("max-height");
+    document.querySelectorAll(".scale-in-cards .scale-in-card .card-content:not(.active)").forEach((each) => {
+      each.style.removeProperty('max-height')
     });
     // If there is active tab, set max-height to scrollHeight
-    if (document.querySelector(".scale-in-cards .scale-in-card.active")) {
-      const height = document.querySelector(
-        ".scale-in-cards .scale-in-card.active"
+    if (document.querySelector(".scale-in-cards .scale-in-card .card-content.active")) {
+      const heightContent = document.querySelector(
+        ".scale-in-cards .scale-in-card .card-content.active"
       ).scrollHeight;
-      document.querySelector(".scale-in-cards .scale-in-card.active").style.maxHeight =
-        height + "px";
+      document.querySelector(".scale-in-cards .scale-in-card .card-content.active").style.maxHeight =
+        heightContent + "px";
     }
   }, [activeTab]);
   // Handle click at tab button

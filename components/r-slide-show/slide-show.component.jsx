@@ -1,7 +1,9 @@
 // Styles
 import "./slide-show.styles.scss";
 // React Functions
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+// Context
+import { ResizeContext } from "../../context/resize.context";
 // Components
 import Card from "../r-card/card.component";
 
@@ -13,6 +15,7 @@ import Card from "../r-card/card.component";
 // topics (list) content for slide-show
 
 const SlideShow = ({ arrows, useFullWidth, swipe, moreVisibleTabs, topics }) => {
+  const { windowWidth } = useContext(ResizeContext)
   // State for first active tab - if more tabs are active this one is first one (left firstActive ...Active right)
   const [firstActiveTab, setFirstActiveTab] = useState(0);
   // State for how many Tabs will be visible at once
@@ -31,14 +34,14 @@ const SlideShow = ({ arrows, useFullWidth, swipe, moreVisibleTabs, topics }) => 
     const content = document.querySelectorAll('.slide')
     const listOfHeights = []
     // Use for index for all slides and push all heights to list above
-    for (let index = 0; index < numOfElements; index++) {
+    for (let index = 0; index < content.length; index++) {
       listOfHeights.push(content[index].scrollHeight)
     }
     // choose biggest height
     const minHeight = Math.max(...listOfHeights)
     // Set biggest height as min-height of slide-show
     document.querySelector('.slide-show').style.minHeight = minHeight + 'px';
-  })
+  }, [windowWidth])
   // This useEffect listen for resize of window to change visibleTabs State
   useEffect(() => {
     if (moreVisibleTabs) {
@@ -59,11 +62,6 @@ const SlideShow = ({ arrows, useFullWidth, swipe, moreVisibleTabs, topics }) => 
       };
       // for initial aspectRatio set we need to call func and not wait for first resize
       handleResize()
-      // resiye listeners
-      window.addEventListener("resize", handleResize);
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
     }
   });
   // What happend if i click right arrow

@@ -6,7 +6,14 @@
   CHANGE only number-of-icons
   */
   --number-of-icons: 11;
-  --height-tab-menu: calc((var(--number-of-icons) * 2.5rem) + ((var(--number-of-icons) - 1) * 2rem) + 2rem);
+  --height-tab-menu: calc(
+    (var(--number-of-icons) * 2.5rem) + ((var(--number-of-icons) - 1) * 2rem) +
+      2rem
+  );
+    --height-tab-menu-min850px: calc(
+    (var(--number-of-icons) * 3.5rem) + ((var(--number-of-icons) - 1) * 2rem) +
+      2rem
+  );
   /*
   bg-image already with opacity and bg-image-color for
   */
@@ -15,118 +22,127 @@
   // Dont forget to edit slider-NUMBER as u need
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   border-radius: 20px;
-  max-height: var(--height-tab-menu);
+  height: var(--height-tab-menu);
   overflow: hidden;
   background-image: var(--bg-image);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 15%;
-  .tab-menu {
+  .tab-menu-bg {
+    margin: 0;
     background-color: var(--secondary-color);
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 4.5rem;
-    margin: 0rem;
-    height: var(--height-tab-menu);
-    & > label:hover{
-      transition: transform 0.2s;
-      transform: scale(1.05);
-    }
-    .menu-slider {
-      position: absolute;
-      z-index: 0;
+    position: relative;
+    .tab-menu {
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
       width: 4.5rem;
-      background-color: var(--bg-image-color);
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
-      -webkit-transition: transform 1.8s, height 1.8s;
-      transition: transform 1.8s, height 1.8s;
-      .bottom-or-left {
-        background: radial-gradient(
-          circle 20.2px at bottom left,
-          var(--secondary-color) 98%,
-          var(--bg-image-color)
-        );
-        width: 2rem;
-        height: 2.5rem;
+      margin: 0rem;
+      height: var(--height-tab-menu);
+      .menu-slider {
         position: absolute;
-        right: 0px;
-        bottom: -20px;
-        z-index: -4;
-      }
-      .top-or-right {
-        background: radial-gradient(
-          circle 20.2px at top left,
-          var(--secondary-color) 98%,
-          var(--bg-image-color)
-        );
-        width: 2rem;
-        height: 2.5rem;
-        position: absolute;
-        right: 0px;
-        top: -20px;
-        z-index: -4;
-      }
-      /*
+        z-index: 0;
+        width: 4.5rem;
+        background-color: var(--bg-image-color);
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        -webkit-transition: transform 1.8s, height 1.8s;
+        transition: transform 1.8s, height 1.8s;
+        .bottom-or-left {
+          background: radial-gradient(
+            circle 20.2px at bottom left,
+            transparent 98%,
+            var(--bg-image-color)
+          );
+          width: 2rem;
+          height: 2.5rem;
+          position: absolute;
+          right: 0px;
+          bottom: -20px;
+          z-index: -4;
+        }
+        .top-or-right {
+          background: radial-gradient(
+            circle 20.2px at top left,
+            transparent 98%,
+            var(--bg-image-color)
+          );
+          width: 2rem;
+          height: 2.5rem;
+          position: absolute;
+          right: 0px;
+          top: -20px;
+          z-index: -4;
+        }
+        /*
       every label must have unique slider-NUMBER class
       height of each slider-NUMBER class count as 45px (25px icon + 10px*2 top&bottom space) * number of icons
       when slider moves to each position it gets specific slider-NUMBER class, thats why there are exact numbers
       */
-      &.slider-0 {
-        height: 135px;
+        @mixin slider($height, $distance) {
+          height: $height;
+          -webkit-transform: translateY($distance);
+          -ms-transform: translateY($distance);
+          transform: translateY($distance);
+        }
+        &.slider-0 {
+          @include slider(135px, 0px);
+        }
+        &.slider-1 {
+          @include slider(45px, 135px);
+        }
+        &.slider-2 {
+          @include slider(45px, 180px);
+        }
+        &.slider-3 {
+          @include slider(45px, 225px);
+        }
+        &.slider-4 {
+          @include slider(90px, 270px);
+        }
+        &.slider-5 {
+          @include slider(45px, 360px);
+        }
+        &.slider-6 {
+          @include slider(45px, 405px);
+        }
+        &.slider-7 {
+          @include slider(45px, 450px);
+        }
       }
-      &.slider-1 {
-        height: 45px;
-        -webkit-transform: translateY(135px);
-        -ms-transform: translateY(135px);
-        transform: translateY(135px);
+      & > label {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 0rem;
+        cursor: pointer;
+        &:first-of-type {
+          margin-top: auto;
+        }
+        &:last-of-type {
+          margin-bottom: auto;
+        }
+        & > * {
+          height: 25px;
+          width: 25px;
+          margin: 0rem 1rem;
+        }
       }
-      &.slider-2 {
-        height: 45px;
-        -webkit-transform: translateY(180px);
-        -ms-transform: translateY(180px);
-        transform: translateY(180px);
-      }
-      &.slider-3 {
-        height: 45px;
-        -webkit-transform: translateY(225px);
-        -ms-transform: translateY(225px);
-        transform: translateY(225px);
-      }
-      &.slider-4 {
-        height: 90px;
-        -webkit-transform: translateY(270px);
-        -ms-transform: translateY(270px);
-        transform: translateY(270px);
-      }
-      &.slider-5 {
-        height: 45px;
-        -webkit-transform: translateY(360px);
-        -ms-transform: translateY(360px);
-        transform: translateY(360px);
-      }
-      &.slider-6 {
-        height: 45px;
-        -webkit-transform: translateY(405px);
-        -ms-transform: translateY(405px);
-        transform: translateY(405px);
-      }
-      &.slider-7 {
-        height: 45px;
-        -webkit-transform: translateY(450px);
-        -ms-transform: translateY(450px);
-        transform: translateY(450px);
+      & > label:hover {
+        transition: transform 0.2s;
+        transform: scale(1.05);
       }
     }
     .menu-slider-fix {
       position: absolute;
       width: 4.5rem;
       height: 100%;
-      height: var(--height-tab-menu);
+      top: 0;
+      left: 0;
       z-index: 0;
       .bottom-or-left-overlap {
         background-color: var(--background-color);
@@ -153,8 +169,8 @@
         width: 2rem;
         height: 2rem;
         position: absolute;
-        right: 0px;
-        top: 0px;
+        right: 0;
+        top: 0;
       }
       .bottom-or-left-corner {
         background: radial-gradient(
@@ -165,28 +181,8 @@
         width: 2rem;
         height: 2rem;
         position: absolute;
-        right: 0px;
-        bottom: 0px;
-      }
-    }
-    & > label {
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      margin: 0rem;
-      &:first-of-type {
-        margin-top: auto;
-      }
-      &:last-of-type {
-        margin-bottom: auto;
-      }
-      & > * {
-        cursor: pointer;
-        height: 25px;
-        width: 25px;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        right: 0;
+        bottom: 0;
       }
     }
   }
@@ -200,20 +196,155 @@
     color: var(--text-reverse-color);
     .tab {
       position: absolute;
-      padding: 0rem 1.5rem;
+      padding: 5%;
       transition: opacity 0.5s, transform 0.5s;
       opacity: 0;
       transform: scale(0, 1);
-      &.active{
+      &.active {
         transition: opacity 0.5s 0.25s, transform 0.5s 0.25s;
         opacity: 1;
         transform: scale(1);
+        position: relative;
       }
       h4:first-of-type {
         margin-bottom: 1rem;
       }
       h4:last-of-type {
         margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .module-cards {
+    flex-direction: column;
+    height: auto;
+    .tab-menu-bg {
+      width: 100%;
+      height: 6rem;
+      .tab-menu {
+        flex-direction: row;
+        height: 6rem;
+        width: var(--height-tab-menu-min850px);
+        margin: 0 auto;
+        .menu-slider {
+          height: 4.5rem;
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 0px;
+          border-top-right-radius: 25px;
+          -webkit-transition: transform 1.8s, width 1.8s;
+          transition: transform 1.8s, width 1.8s;
+          .bottom-or-left{
+            background: radial-gradient(
+              circle 25.4px at top left,
+              transparent 98%,
+              var(--bg-image-color)
+            );
+            width: 3rem;
+            height: 2.5rem;
+            right: auto;
+            bottom: 0px;
+            left: -25px;
+          }
+          .top-or-right{
+            background: radial-gradient(
+              circle 25.4px at top right,
+              transparent 98%,
+              var(--bg-image-color)
+            );
+            width: 3rem;
+            height: 2.5rem;
+            right: -25px;
+            top: auto;
+            bottom: 0px;
+          }
+
+          @mixin sliderX($width, $distance) {
+            width: $width;
+            height: inherit;
+            -webkit-transform: translateX($distance);
+            -ms-transform: translateX($distance);
+            transform: translateX($distance);
+          }
+          &.slider-0 {
+            @include sliderX(165px, 0px);
+          }
+          &.slider-1 {
+            @include sliderX(55px, 165px);
+          }
+          &.slider-2 {
+            @include sliderX(55px, 220px);
+          }
+          &.slider-3 {
+            @include sliderX(55px, 275px);
+          }
+          &.slider-4 {
+            @include sliderX(110px, 330px);
+          }
+          &.slider-5 {
+            @include sliderX(55px, 440px);
+          }
+          &.slider-6 {
+            @include sliderX(55px, 495px);
+          }
+          &.slider-7 {
+            @include sliderX(55px, 550px);
+          }
+        }
+        & > label {
+          flex-direction: row;
+          &:first-of-type {
+            margin-top: 0;
+            margin-left: auto;
+          }
+          &:last-of-type {
+            margin-bottom: 0;
+            margin-right: auto;
+          }
+          & > * {
+            height: 35px;
+            width: 35px;
+            margin: 1rem 0rem;
+          }
+        }
+      }
+      .menu-slider-fix {
+        width: 100%;
+        height: 6rem;
+        .bottom-or-left-overlap{
+          right: auto;
+          bottom: 0px;
+          left: -20px;
+        }
+        .top-or-right-overlap{
+          top: auto;
+          right: -20px;
+          bottom: 0px;
+        }
+        .bottom-or-left-corner{
+          background: radial-gradient(
+            circle 20.2px at top right,
+            transparent 98%,
+            var(--bg-image-color)
+          );
+          left: 0;
+          right: auto;
+        }
+        .top-or-right-corner{
+          background: radial-gradient(
+            circle 20.2px at top left,
+            transparent 98%,
+            var(--bg-image-color)
+          );
+          bottom: 0;
+          top: auto;
+        }
+      }
+    }
+    .tab-content {
+      .tab {
+        padding: 2.5% 15%;
       }
     }
   }

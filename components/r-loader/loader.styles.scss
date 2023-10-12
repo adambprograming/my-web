@@ -11,7 +11,7 @@
   align-items: center;
   display: flex;
   &.loaded {
-    animation: loaded 0.5s forwards;
+    animation: loaded 1s forwards;
     @keyframes loaded {
         from{
             opacity: 1;

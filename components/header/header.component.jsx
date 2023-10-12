@@ -41,7 +41,9 @@ const Header = () => {
           onClick={handleLogoClick}
         />
       </div>
-      <MenuDropdown />
+      <div className="container-menu">
+        <MenuDropdown />
+      </div>
     </header>
   );
 };

@@ -1,18 +1,12 @@
-.container-menu {
-  margin: auto 2%;
-  /* Style for the menu icon */
-  // .menu-icon {
-    // cursor: pointer;
-    /* Add any other styling you want for the menu icon */
-  // }
-
+.nav {
+  margin: auto;
   /* Dropdown styles */
   .dropdown {
     display: none;
     position: absolute;
     list-style-type: none;
-    padding: 0.5rem 1rem;
-    right: 2%;
+    padding: 0.5rem 0;
+    right: 4.5%;
   }
 
   .dropdown-item:last-child {
