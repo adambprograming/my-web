@@ -4,9 +4,7 @@ import "./module-tabs.styles.scss";
 // Next Functions
 import Image from "next/image";
 // React Functions
-import { useState, useEffect, useContext } from "react";
-// Context
-import { ResizeContext } from "../../context/resize.context";
+import { useState, useEffect } from "react";
 
 // ModuleTabs is reusable component that takes three arguments = list of icons, list of alts to icons and list of content in the exact form
 // [{
@@ -20,22 +18,39 @@ import { ResizeContext } from "../../context/resize.context";
 // --height-tab-menu must be edited (read comment in css above variable declaration) and slider-NUMBER must be edited (read comment in css)
 // edit bg-image and bg-image-color var in css as u need
 const ModuleTabs = ({ topics, icons, alts }) => {
-  const { windowWidth } = useContext(ResizeContext)
   const [activeTab, setActiveTab] = useState(0);
-  // This useEffect set minHeight to biggest height of all elements
+  // This useEffect set minHeight of tab-content to maxHeight of all tabs
   useEffect(() => {
-    // Select all slides
-    const content = document.querySelectorAll('.tab')
-    const listOfHeights = []
-    // Use for index for all slides and push all heights to list above
-    for (let index = 0; index < content.length; index++) {
-      listOfHeights.push(content[index].scrollHeight)
+    const handleModuleTabsResize = () => {
+      // Select all slides
+      const content = document.querySelectorAll('.module-cards .tab-content .tab')
+      const listOfHeights = []
+      // Use for index for all slides and push all heights to list above
+      for (let index = 0; index < content.length; index++) {
+        listOfHeights.push(content[index].scrollHeight)
+      }
+      // choose biggest height
+      const minHeight = Math.max(...listOfHeights)
+      // Set biggest height as min-height of slide-show
+      document.querySelector('.module-cards .tab-content').style.minHeight = minHeight + 'px';
+      // console.log('module');
+      // console.log(minHeight);
     }
-    // choose biggest height
-    const minHeight = Math.max(...listOfHeights)
-    // Set biggest height as min-height of slide-show
-    document.querySelector('.tab-content').style.minHeight = minHeight + 'px';
-  }, [windowWidth])
+    // first handleModuleTabsResize on load
+    window.addEventListener('load',
+      () => {
+        const slide = document.querySelector('.module-cards .tab-content .tab');
+        if (slide){
+          handleModuleTabsResize()
+        }
+      }
+    )
+    // handleModuleTabsResize on resize
+    window.addEventListener("resize", handleModuleTabsResize);
+    return () => {
+      window.removeEventListener("resize", handleModuleTabsResize);
+    };
+  })
 
   return (
     <div className="module-cards">

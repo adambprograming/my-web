@@ -1,9 +1,8 @@
+'use-client'
 // Styles
 import "./slide-show.styles.scss";
 // React Functions
-import { useEffect, useState, useContext } from "react";
-// Context
-import { ResizeContext } from "../../context/resize.context";
+import { useEffect, useState } from "react";
 // Components
 import Card from "../r-card/card.component";
 
@@ -15,7 +14,6 @@ import Card from "../r-card/card.component";
 // topics (list) content for slide-show
 
 const SlideShow = ({ arrows, useFullWidth, swipe, moreVisibleTabs, topics }) => {
-  const { windowWidth } = useContext(ResizeContext)
   // State for first active tab - if more tabs are active this one is first one (left firstActive ...Active right)
   const [firstActiveTab, setFirstActiveTab] = useState(0);
   // State for how many Tabs will be visible at once
@@ -28,28 +26,43 @@ const SlideShow = ({ arrows, useFullWidth, swipe, moreVisibleTabs, topics }) => 
   const lastElement = topics.length - 1;
   // Index of first element
   const firstElement = 0;
-  // This useEffect set minHeight to biggest height of all elements
+  // This effect set minHeight of slide-show to maxHeight of all slides
   useEffect(() => {
-    // Select all slides
-    const content = document.querySelectorAll('.slide')
-    const listOfHeights = []
-    // Use for index for all slides and push all heights to list above
-    for (let index = 0; index < content.length; index++) {
-      listOfHeights.push(content[index].scrollHeight)
+    const handleMinHeightSlideShow = () => {
+      const content = document.querySelectorAll('.slide-show .slides .slide')
+      const listOfHeights = []
+      // Use for index for all slides and push all heights to list above
+      for (let index = 0; index < content.length; index++) {
+        listOfHeights.push(content[index].scrollHeight)
+      }
+      // choose biggest height
+      const minHeight = Math.max(...listOfHeights)
+      // Set biggest height as min-height of slide-show
+      document.querySelector('.slide-show').style.minHeight = minHeight + 'px';
     }
-    // choose biggest height
-    const minHeight = Math.max(...listOfHeights)
-    // Set biggest height as min-height of slide-show
-    document.querySelector('.slide-show').style.minHeight = minHeight + 'px';
-  }, [windowWidth])
+    // first handleMinHeightSlideShow on load
+    window.addEventListener('load',
+      () => {
+        const slide = document.querySelector('.slide-show .slides .slide');
+        if (slide){
+          handleMinHeightSlideShow()
+        }
+      }
+    )
+    // handleMinHeightSlideShow on resize
+    window.addEventListener("resize", handleMinHeightSlideShow);
+    return () => {
+      window.removeEventListener("resize", handleMinHeightSlideShow);
+    };
+  });
   // This useEffect listen for resize of window to change visibleTabs State
   useEffect(() => {
     if (moreVisibleTabs) {
-      const handleResize = () => {
+      const handleSlideShowResize = () => {
         // Width of space for slides
-        const widthOfSlides = document.querySelector(".slides").scrollWidth;
+        const widthOfSlides = document.querySelector(".slide-show .slides").scrollWidth;
         // Width of each slide
-        const widthOfSlide = document.querySelector(".slide").scrollWidth;
+        const widthOfSlide = document.querySelector(".slide-show .slides .slide").scrollWidth;
         // aspectRatio is how many slides can fit to slides space
         const aspectRatio = Math.floor(widthOfSlides / (widthOfSlide + 10));
         setVisibleTabs(aspectRatio);
@@ -60,8 +73,20 @@ const SlideShow = ({ arrows, useFullWidth, swipe, moreVisibleTabs, topics }) => 
           setIsSlideable(true)
         }
       };
-      // for initial aspectRatio set we need to call func and not wait for first resize
-      handleResize()
+      // first handleSlideShowResize on load
+      window.addEventListener('load',
+        () => {
+          const slide = document.querySelector('.slide-show .slides .slide');
+          if (slide){
+            handleSlideShowResize()
+          }
+        }
+      )
+      // handleSlideShowResize on resize
+      window.addEventListener("resize", handleSlideShowResize);
+      return () => {
+        window.removeEventListener("resize", handleSlideShowResize);
+      };
     }
   });
   // What happend if i click right arrow
