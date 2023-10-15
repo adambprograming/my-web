@@ -1,59 +1,41 @@
 .nav {
-  margin: auto;
-  /* Dropdown styles */
+  &:hover .dropdown{
+    display: block;
+  }
   .dropdown {
     display: none;
     position: absolute;
     list-style-type: none;
     padding: 0.5rem 0;
     right: 4.5%;
+    &.active{
+      display: block;
+    }
+    .dropdown-item {
+      background-color: var(--text-color);
+      padding: 0.5rem;
+      border: 0.1rem solid var(--black-10);
+      &:last-child{
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+      &:first-child{
+        border-top-left-radius: 1rem;
+      }
+    }
   }
-
-  .dropdown-item:last-child {
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-  }
-
-  .dropdown-item:first-child {
-    border-top-left-radius: 1rem;
-  }
-
-  .dropdown-item {
-    /* Add styles for individual dropdown items here */
-    /* For example, you can set background color, padding, text color, etc. */
-    background-color: var(--text-color);
-    padding: 0.5rem;
-    border: 0.1rem solid var(--black-10);
-  }
-
-  .dropdown-item h5:hover{
+  .dropdown-item button h5:hover{
     transform: scale(1.05) translate3d(1,0,0);
     color: var(--secondary-color);
 }
-
-  /* Style the links within the dropdown */
-  .dropdown-item a {
-    display: block;
-    text-decoration: none;
+  .dropdown-item button {
     color: var(--background-color);
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
     text-align: center;
-    /* Add any other styles for the links within the dropdown */
   }
 }
-
-/* Show the dropdown on hover */
-.container-menu:hover {
-  .dropdown {
-    display: block;
-  }
-}
-
-.dropdown.active{
-    display: block;
-}
-
-
-
 
 // Variables Menu Icon
 $menu-icon-line-height: 4px;
