@@ -19,32 +19,30 @@ import { useState, useEffect } from "react";
 // edit bg-image and bg-image-color var in css as u need
 const ModuleTabs = ({ topics, icons, alts }) => {
   const [activeTab, setActiveTab] = useState(0);
-  // This useEffect set minHeight of tab-content to maxHeight of all tabs
-  useEffect(() => {
-    const handleModuleTabsResize = () => {
-      // Select all slides
-      const content = document.querySelectorAll('.module-cards .tab-content .tab')
-      const listOfHeights = []
-      // Use for index for all slides and push all heights to list above
-      for (let index = 0; index < content.length; index++) {
-        listOfHeights.push(content[index].scrollHeight)
-      }
-      // choose biggest height
-      const minHeight = Math.max(...listOfHeights)
-      // Set biggest height as min-height of slide-show
-      document.querySelector('.module-cards .tab-content').style.minHeight = minHeight + 'px';
-      // console.log('module');
-      // console.log(minHeight);
+  // This hook set minHeight of tab-content to maxHeight of all tabs
+  const handleModuleTabsResize = () => {
+    // Select all slides
+    const content = document.querySelectorAll('.module-cards .tab-content .tab')
+    const listOfHeights = []
+    // Use for index for all slides and push all heights to list above
+    for (let index = 0; index < content.length; index++) {
+      listOfHeights.push(content[index].scrollHeight)
     }
+    // choose biggest height
+    const minHeight = Math.max(...listOfHeights)
+    // Set biggest height as min-height of slide-show
+    document.querySelector('.module-cards .tab-content').style.minHeight = minHeight + 'px';
+  }
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
     // first handleModuleTabsResize on load
-    window.addEventListener('load',
-      () => {
-        const slide = document.querySelector('.module-cards .tab-content .tab');
-        if (slide){
-          handleModuleTabsResize()
-        }
+    const slide = document.querySelector('.module-cards .tab-content .tab');
+      if (slide){
+        handleModuleTabsResize()
       }
-    )
+    }
+  }, [])
+  useEffect(() => {
     // handleModuleTabsResize on resize
     window.addEventListener("resize", handleModuleTabsResize);
     return () => {

@@ -26,68 +26,59 @@ const SlideShow = ({ arrows, useFullWidth, swipe, moreVisibleTabs, topics }) => 
   const lastElement = topics.length - 1;
   // Index of first element
   const firstElement = 0;
-  // This effect set minHeight of slide-show to maxHeight of all slides
-  useEffect(() => {
-    const handleMinHeightSlideShow = () => {
-      const content = document.querySelectorAll('.slide-show .slides .slide')
-      const listOfHeights = []
-      // Use for index for all slides and push all heights to list above
-      for (let index = 0; index < content.length; index++) {
-        listOfHeights.push(content[index].scrollHeight)
-      }
-      // choose biggest height
-      const minHeight = Math.max(...listOfHeights)
-      // Set biggest height as min-height of slide-show
-      document.querySelector('.slide-show').style.minHeight = minHeight + 'px';
+    // This hook set minHeight of slide-show to maxHeight of all slides
+  const handleMinHeightSlideShow = () => {
+    const content = document.querySelectorAll('.slide-show .slides .slide')
+    const listOfHeights = []
+    // Use for index for all slides and push all heights to list above
+    for (let index = 0; index < content.length; index++) {
+      listOfHeights.push(content[index].scrollHeight)
     }
-    // first handleMinHeightSlideShow on load
-    window.addEventListener('load',
-      () => {
-        const slide = document.querySelector('.slide-show .slides .slide');
-        if (slide){
-          handleMinHeightSlideShow()
-        }
+    // choose biggest height
+    const minHeight = Math.max(...listOfHeights)
+    // Set biggest height as min-height of slide-show
+    document.querySelector('.slide-show').style.minHeight = minHeight + 'px';
+  }
+  // This hook visibleTabs State on window.width change
+  const handleSlideShowResize = () => {
+    if(moreVisibleTabs){
+      // Width of space for slides
+      const widthOfSlides = document.querySelector(".slide-show .slides").scrollWidth;
+      // Width of each slide
+      const widthOfSlide = document.querySelector(".slide-show .slides .slide").scrollWidth;
+      // aspectRatio is how many slides can fit to slides space
+      const aspectRatio = Math.floor(widthOfSlides / (widthOfSlide + 10));
+      setVisibleTabs(aspectRatio);
+      // If aspect ratio is equal or more than number of tabs and useFullWidth param is true, then use full width to show all tabs and OFF slideshow
+      if (aspectRatio >= numOfElements && useFullWidth) {
+        setIsSlideable(false)
+      } else {
+        setIsSlideable(true)
       }
-    )
+    }
+  };
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // first handleMinHeightSlideShow on load
+      const slide = document.querySelector('.slide-show .slides .slide');
+      if (slide){
+        handleMinHeightSlideShow()
+        handleSlideShowResize()
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  useEffect(() => {
     // handleMinHeightSlideShow on resize
     window.addEventListener("resize", handleMinHeightSlideShow);
+    // handleSlideShowResize on resize
+    window.addEventListener("resize", handleSlideShowResize);
     return () => {
+      // handleMinHeightSlideShow on resize
       window.removeEventListener("resize", handleMinHeightSlideShow);
-    };
-  });
-  // This useEffect listen for resize of window to change visibleTabs State
-  useEffect(() => {
-    if (moreVisibleTabs) {
-      const handleSlideShowResize = () => {
-        // Width of space for slides
-        const widthOfSlides = document.querySelector(".slide-show .slides").scrollWidth;
-        // Width of each slide
-        const widthOfSlide = document.querySelector(".slide-show .slides .slide").scrollWidth;
-        // aspectRatio is how many slides can fit to slides space
-        const aspectRatio = Math.floor(widthOfSlides / (widthOfSlide + 10));
-        setVisibleTabs(aspectRatio);
-        // If aspect ratio is equal or more than number of tabs and useFullWidth param is true, then use full width to show all tabs and OFF slideshow
-        if (aspectRatio >= numOfElements && useFullWidth) {
-          setIsSlideable(false)
-        } else {
-          setIsSlideable(true)
-        }
-      };
-      // first handleSlideShowResize on load
-      window.addEventListener('load',
-        () => {
-          const slide = document.querySelector('.slide-show .slides .slide');
-          if (slide){
-            handleSlideShowResize()
-          }
-        }
-      )
       // handleSlideShowResize on resize
-      window.addEventListener("resize", handleSlideShowResize);
-      return () => {
-        window.removeEventListener("resize", handleSlideShowResize);
-      };
-    }
+      window.removeEventListener("resize", handleSlideShowResize);
+    };
   });
   // What happend if i click right arrow
   const handleRightArrow = () => {

@@ -37,11 +37,11 @@
       },
       {
         "title": "Univerzita",
-        "content": "Pro své další studium jsem si vybral UHK, fakultu FIM, obor Informační management. Aktuálně studuji bakalářské studium a plánuji pokračovat na magisterské ve stejném oboru. I zde jsem se přiblížil k programování (html, css, javascript, java a práce s databázemi). Znalosti získané s povinných předmětů mi úplně nestačili a proto jsem se začal učit ve volném čase sám."
+        "content": "Pro své další studium jsem si vybral UHK, fakultu FIM, obor Informační management. Aktuálně studuji bakalářské studium a plánuji pokračovat na magisterské ve stejném oboru. I zde jsem se přiblížil k programování (html, css, javascript, java a práce s databázemi). Znalosti získané z povinných předmětů mi úplně nestačily, a proto jsem se ve volném čase začal sebevzdělávat sám."
       },
       {
         "title": "Sebevzdělání",
-        "content": "Nejprve jsem se chtěl seznámit s backendem, protože mě zajímalo jak to všechno funguje, proto jsem se rok učil python. Poté jsem si chtěl alespoň trochu doplnit znalosti z front-endu a umět full-stack, ale u front-endu jsem nakonec zůstal a poslední rok se v něm snažím zlepšovat. Primárně se snažím zlepšovat v reactu/nextu a psát kvalitní čitelný kód."
+        "content": "Nejprve jsem se chtěl seznámit s backendem, protože mě zajímalo jak to všechno funguje, a proto jsem se rok učil Python. Poté jsem si chtěl alespoň trochu doplnit znalosti z front-endu a umět full-stack, ale u front-endu jsem nakonec zůstal a poslední rok se v něm snažím zlepšovat. Primárně se snažím zlepšovat v reactu/nextu a psát kvalitní a čitelný kód."
       }
     ]
   },
@@ -58,7 +58,7 @@
       },
       {
         "title": "Javascript",
-        "content": "Javascript je pro mě další ze základů, i když jsem se s ním setkal spíše až ke konci střední školy/začátku vysoké. V obouch kurzech zaměřených na front-end jsem se javascript učil, takže jazyk jako takový znám a rozumím mu. Nejspíše jsem se až moc rychle pustil do frameworku (React) a proto se stále ještě určité pricipy javascriptu učím za pochodu.",
+        "content": "Javascript je pro mě další ze základů, i když jsem se s ním setkal spíše až ke konci střední školy/začátku vysoké. V obouch kurzech zaměřených na front-end jsem se javascript učil, takže jazyk jako takový znám a rozumím mu. Nejspíše jsem se až moc rychle pustil do frameworku (React), a proto je ještě pár principů javascriptu, které se učím za pochodu.",
         "projects": {
           "title": "PROJEKTY",
           "content": "5"
@@ -66,23 +66,23 @@
       },
       {
         "title": "React",
-        "content": "Rozhodování mezi frameworky React a Angular pro mě bylo trochu složitější, ale nakonec jsem zvolil React a zpětně mi to přijde jako skvělá volba. Poprvé jsem se s Reactem setkal ve svém první FrontEnd kurzu a ještě než jsem ho kompletně dodělal, pořídil jsem kurz specializovaný na React, Redux a Typescript, který jestě dodělávám, protože nyní čas věnuji spíše reálným projektům.",
+        "content": "Rozhodování mezi frameworky React a Angular pro mě bylo trochu složitější, ale nakonec jsem zvolil React a zpětně mi to přijde jako skvělá volba. Poprvé jsem se s Reactem setkal ve svém prvním FrontEnd kurzu a ještě než jsem ho kompletně dodělal, pořídil jsem kurz specializovaný na React, Redux a Typescript, který jestě dodělávám, protože nyní čas věnuji realizaci projektů.",
         "projects": {
           "title": "PROJEKTY",
-          "content": "2"
+          "content": "3"
         }
       },
       {
         "title": "Next.js",
-        "content": "Next.js pro mě nebyl až tak jednoznačnou volbou hlavně kvůli Pages router, který mi není zdaleka tak sympatický jako poměrně nový App router, ale jakmile se uvedl do provozu a už není jen v 'testovací verzi' tak začal využívat pouze Next a rád bych v něm pokračoval, i když samozřejmě nemám problém se naučit i jiný framework.",
+        "content": "Next.js pro mě nebyl až tak jednoznačnou volbou hlavně kvůli Pages routeru, který mi není zdaleka tak sympatický jako poměrně nový App router, ale jakmile se uvedl do provozu a už není jen v 'testovací verzi', hned jsem začal využívat primárně Next a rád bych v něm pokračoval, i když samozřejmě nemám problém se naučit i jiný framework.",
         "projects": {
           "title": "PROJEKTY",
-          "content": "2"
+          "content": "3"
         }
       },
       {
         "title": "Git & GitHub",
-        "content": "Git a GitHub jsou pro mě určite základy a s Control Version se snažím pracovat na denní bázi, vždy každou úpravu kódu mít aktivně na githubu. Vím, že v každé firmě se s GitHubem pracuje a proto považuji tuto dovednost za nezbytnou. Git a GitHub jsem měl ve všech třech kurzech a setkávám se s tím v každém projektu a videu z kterých se učím.",
+        "content": "Git a GitHub jsou pro mě určitě základy a s Control Version se snažím pracovat na denní bázi, vždy každou úpravu kódu pushovat na github. Vím, že v každé firmě se s GitHubem pracuje, a proto považuji tuto dovednost za nezbytnou. Git a GitHub jsem měl ve všech třech kurzech a setkávám se s tím v každém projektu a videu, z kterých se učím.",
         "projects": {
           "title": "PROJEKTY",
           "content": "10+"
@@ -90,7 +90,7 @@
       },
       {
         "title": "Python",
-        "content": "Původně jsem v pythonu viděl svoji programátorskou budoucnost, ale po větším poznání front-endu mě zaujalo dělat spíše něco co je více vidět. I přesto jsem měl Python velice rád a absolvoval jsem celý 100 denní kurz na Udemy, který mi trval skoro rok. V kurzu jsem se dostal od hry hangman, přes práci s knihovnami (NumPy, Matplotlib, SciPy, atd.), až po základy AI.",
+        "content": "Původně jsem v pythonu viděl svoji programátorskou budoucnost, ale po větším poznání front-endu mě zaujalo dělat spíše něco co je více vidět. I přesto jsem měl Python velice rád a absolvoval jsem celý 100 denní kurz na Udemy, který mi se všemi projekty trval skoro rok. V kurzu jsem se dostal od hry hangman, přes práci s knihovnami (NumPy, Matplotlib, SciPy, atd.), až po základy AI.",
         "projects": {
           "title": "PROJEKTY",
           "content": "10+"
@@ -98,7 +98,7 @@
       },
       {
         "title": "Figma",
-        "content": "DOPLNIT",
+        "content": "Figmu využívám k návrhu webových stránek a prvotní vizualizaci svých nápadů, realizace stránek je pak mnohem snažší. Nepředpokládám, že bych k práci potřeboval Figmu, nebo jiný designový program, ale zmiňuji, že s takovým programem mám zkušenosti, pro případnou práci s návrhem od designéra.",
         "projects": {
           "title": "PROJEKTY",
           "content": "3"
@@ -106,7 +106,7 @@
       },
       {
         "title": "Typescript",
-        "content": "DOPLNIT",
+        "content": "Typescript teprve objevuji, takže se zatím nedá začlenit do mých dovedností, čož se snad brzy změní.",
         "projects": {
           "title": "PROJEKTY",
           "content": "0"

@@ -4,10 +4,9 @@ import "./header.styles.scss";
 // Next Functions
 import { redirect } from "next/navigation";
 // React Functions
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 // Context
 import { LanguageContext } from "../../context/lang.context";
-import { ResizeContext } from "../../context/resize.context";
 // Componenets
 import ColorThemeBtn from "../buttons-settings/btn-color-theme.component";
 import LanguageBtn from "../buttons-settings/btn-lang.component";
@@ -16,7 +15,20 @@ import IconLogo from "../svgs/logo.component";
 
 const Header = () => {
   const { languageDict } = useContext(LanguageContext);
-  const { windowWidth } = useContext(ResizeContext)
+  const [ windowWidth, setWindowWidth ] = useState(0)
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth)
+  }
+  useEffect(() => {
+    handleResize()
+  }, [])
+  useEffect(() => {
+    // resize listeners
+    window.addEventListener("resize", handleResize);
+    return () => {
+    window.removeEventListener("resize", handleResize);
+    };
+  })
   const handleLogoClick = () => {
     if (languageDict.lang == "en") {
       // Change URL without re-render

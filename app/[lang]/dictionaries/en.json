@@ -68,7 +68,7 @@
         "content": "Deciding between the React and Angular frameworks was a bit more difficult for me, but in the end, I chose React and in retrospect, it seems like a great choice. I first encountered React in my first FrontEnd course and before I finished it completely I took a course specialized in React, Redux and Typescript, which I'm still finishing because now I'm spending my time more on real projects.",
         "projects": {
           "title": "PROJECTS",
-          "content": "2"
+          "content": "3"
         }
       },
       {
@@ -76,7 +76,7 @@
         "content": "Next.js wasn't such a clear choice for me mainly because of Pages router, which I don't like nearly as much as the relatively new App router, but once it went live and is no longer in 'test version' I started using only Next and would like to continue using it, though of course, I have no problem learning another framework.",
         "projects": {
           "title": "PROJECTS",
-          "content": "2"
+          "content": "3"
         }
       },
       {
@@ -97,7 +97,7 @@
       },
       {
         "title": "Figma",
-        "content": "DOPLNIT",
+        "content": "I use Figma for web design and initial visualization of my ideas, and it makes the implementation of the site much easier. I don't presume that I need Figma, or any other design program, to work, but I mention that I have experience with such a program, for possible handling of a proposal from a designer.",
         "projects": {
           "title": "PROJECTS",
           "content": "3"
@@ -105,7 +105,7 @@
       },
             {
         "title": "Typescript",
-        "content": "DOPLNIT",
+        "content": "I'm just discovering Typescript, so it can't be incorporated into my skills yet, which will hopefully change soon.",
         "projects": {
           "title": "PROJECTS",
           "content": "0"
