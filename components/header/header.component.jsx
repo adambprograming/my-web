@@ -31,15 +31,9 @@ const Header = () => {
   })
   const handleLogoClick = () => {
     if (languageDict.lang == "en") {
-      // Change URL without re-render
-      window.history.pushState('EN', undefined, '/en')
-      // redirect to new URL without re-render
-      redirect('/en', 'replace');
+      window.location.href = '/en'
     } else {
-      // Change URL without re-render
-      window.history.pushState('CZ', undefined, '/cz')
-      // redirect to new URL without re-render
-      redirect('/cz', 'replace')
+      window.location.href = '/cz'
     }
   }
   return (

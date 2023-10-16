@@ -5,9 +5,9 @@ import { useContext } from "react";
 import { LanguageContext } from "../../context/lang.context";
 
 const Footer = () => {
-    const { languageDict } = useContext(LanguageContext)
+  const { languageDict } = useContext(LanguageContext)
   return (
-    <footer className="article_footer">
+    <footer id="footer">
       <p>{languageDict.article_footer.copyright}</p>
     </footer>
   );

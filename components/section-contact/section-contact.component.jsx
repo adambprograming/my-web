@@ -18,9 +18,17 @@ const SectionContact = () => {
   const topics = languageDict.article_contact.main.job_demand.content
   const copyTel = () => {
     navigator.clipboard.writeText(languageDict.article_contact.main.contact.phone)
+    document.querySelector(".contact-tel .tel-copied").classList.add('clicked')
+    setTimeout( function() {
+        document.querySelector(".contact-tel .tel-copied").classList.remove('clicked')
+    }, 1000);
   }
   const copyMail = () => {
     navigator.clipboard.writeText(languageDict.article_contact.main.contact.email_copy)
+    document.querySelector(".contact-mail .mail-copied").classList.add('clicked')
+    setTimeout( function() {
+        document.querySelector(".contact-mail .mail-copied").classList.remove('clicked')
+    }, 1000);
   }
   return (
     <section className="contact-container">
@@ -31,10 +39,12 @@ const SectionContact = () => {
         <div className='contacts'>
           <div className='contact-contacts'>
             <div className='contact-tel' onClick={copyTel}>
+              <span className='tel-copied'><h6>Copied!</h6></span>
               <IconTel className='contact-tel-icon' alt={languageDict.article_contact.main.contact.alts.phone} />
               <h6>{languageDict.article_contact.main.contact.phone}</h6>
             </div>
             <div className='contact-mail' onClick={copyMail}>
+              <span className='mail-copied'><h6>Copied!</h6></span>
               <IconMail className='contact-mail-icon' alt={languageDict.article_contact.main.contact.alts.email} />
               <h6>{languageDict.article_contact.main.contact.email}</h6>
             </div>

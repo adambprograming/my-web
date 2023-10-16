@@ -65,6 +65,7 @@
         height: calc(25px * var(--multiplier));
         width: calc(25px * var(--multiplier));
         cursor: pointer;
+        pointer-events: none;
     }
 
     .right-icon-btn {
@@ -74,6 +75,7 @@
         height: calc(25px * var(--multiplier));
         width: calc(25px * var(--multiplier));
         cursor: pointer;
+        pointer-events: none;
     }
 
     @mixin btn-slider($distance) {
