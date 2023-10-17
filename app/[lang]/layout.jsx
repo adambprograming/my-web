@@ -15,15 +15,18 @@ const gemunuLibre = Gemunu_Libre({weight: '400', subsets: ['latin'], variable: '
 const livvic = Livvic({weight: '400', subsets: ['latin'], variable: '--font-livvic'})
 const asap = Asap({weight: '400', subsets: ['latin'], variable: '--font-asap'})
 
+export async function generateMetadata({ params: { lang } }) {
+  return {
+    title: 'Adam Bartůšek',
+    description: `${lang == 'cz' ? ('Osobní webové stránky pro prezentaci') : ('Personal website for presentation')}`,
+  }
+}
+
 export default function RootLayout({ children, params: { lang } }) {
   return (
     <html lang={lang} className={`${asap.variable} ${livvic.variable} ${gemunuLibre.variable}`}>
-      <head>
-        <title>Adam Bartůšek</title>
-        <meta name="description" content={lang == 'cz' ? ('Osobní webové stránky pro prezentaci') : ('Personal website for presentation')} />
-      </head>
       <body suppressHydrationWarning={true}>
-        {/* <Loader /> */}
+        <Loader />
         <LanguageProvider lang={lang}>
           <ColorThemeProvider>
               <Header />

@@ -1,4 +1,4 @@
-"use-client";
+'use client'
 // Styles
 import "./module-tabs.styles.scss";
 // Next Functions

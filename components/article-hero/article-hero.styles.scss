@@ -1,0 +1,28 @@
+#article-hero {
+  display: flex;
+  flex-direction: column;
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto;
+  }
+  .profile-picture {
+    border: 0.75rem solid var(--primary-color);
+    border-radius: 50%;
+    margin: 2.5rem auto;
+    box-shadow: 0px 0px 20px 5px var(--ascent-color-opacity-50);
+    pointer-events: none;
+  }
+}
+@media only screen and (min-width: 850px) {
+  #article-hero {
+    .content-container {
+      gap: 1rem;
+      margin: 5rem auto;
+    }
+    .profile-picture {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
