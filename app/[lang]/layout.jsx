@@ -1,9 +1,7 @@
 // Fonts
 import { Gemunu_Libre, Livvic, Asap } from 'next/font/google'
 // Styles
-import "./reset.scss";
 import "./globals.scss";
-import "./layout.scss";
 // Context
 import { ColorThemeProvider } from "../../context/color-theme.context";
 import { LanguageProvider } from "../../context/lang.context";
