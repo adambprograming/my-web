@@ -50,10 +50,10 @@ const SectionContact = () => {
             </div>
           </div>
           <div className='contact-links'>
-            <Link href={languageDict.article_contact.main.contact.link_github} aria-label={languageDict.article_contact.main.contact.contact.link_github_arialabel}>
+            <Link href={languageDict.article_contact.main.contact.link_github} aria-label={languageDict.article_contact.main.contact.link_github_arialabel}>
               <IconGithub className='contact-github-icon' alt={languageDict.article_contact.main.contact.alts.github} />
             </Link>
-            <Link href={languageDict.article_contact.main.contact.link_linkedin} aria-label={languageDict.article_contact.main.contact.contact.link_linkedin_arialabel}>
+            <Link href={languageDict.article_contact.main.contact.link_linkedin} aria-label={languageDict.article_contact.main.contact.link_linkedin_arialabel}>
               <IconLinkedin className='contact-linkedin-icon' alt={languageDict.article_contact.main.contact.alts.linkedin} />
             </Link>
           </div>
