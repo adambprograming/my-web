@@ -34,8 +34,7 @@
   }
   .aside-education{
     position: relative;
-    font-family: 'Gemunu Libre';
-    width: 12.5%;
+    font-family: var(--font-gemunulibre), sans-serif;    width: 12.5%;
     margin: -2rem 0%;
     left: -0.5rem;
     letter-spacing: -1rem;
@@ -53,7 +52,7 @@
   flex-direction: row;
   .aside-techstack{
     position: relative;
-    font-family: 'Gemunu Libre';
+    font-family: var(--font-gemunulibre), sans-serif;
     width: 12.5%;
     margin: -7.2rem 0% -2rem 0%;
     white-space: pre-wrap;
@@ -83,7 +82,7 @@
   }
   .aside-contact{
     position: relative;
-    font-family: 'Gemunu Libre';
+    font-family: var(--font-gemunulibre), sans-serif;
     width: 12.5%;
     left: -0.5rem;
     letter-spacing: -1rem;
