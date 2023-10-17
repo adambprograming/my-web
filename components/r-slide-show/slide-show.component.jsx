@@ -1,4 +1,4 @@
-'use-client'
+'use client'
 // Styles
 import "./slide-show.styles.scss";
 // React Functions

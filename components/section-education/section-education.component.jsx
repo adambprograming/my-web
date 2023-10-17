@@ -1,4 +1,3 @@
-'use client'
 // Styles
 import "./section-education.styles.scss";
 // React Functions

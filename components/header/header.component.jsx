@@ -1,8 +1,6 @@
 "use client";
 // Styles
 import "./header.styles.scss";
-// Next Functions
-import { redirect } from "next/navigation";
 // React Functions
 import { useContext, useEffect, useState } from "react";
 // Context

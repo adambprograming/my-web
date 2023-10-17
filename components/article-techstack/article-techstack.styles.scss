@@ -1,0 +1,18 @@
+#article-techstack {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    .aside-techstack{
+      position: relative;
+      font-family: var(--font-gemunulibre), sans-serif;
+      width: 12.5%;
+      margin: -7.2rem 0% -2rem 0%;
+      white-space: pre-wrap;
+      left: -0.5rem;
+      letter-spacing: -1rem;
+      font-size: 8rem;
+      line-height: 90%;
+      color: var(--primary-color);
+      z-index: -2;
+    }
+  }
