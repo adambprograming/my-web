@@ -156,7 +156,9 @@
         "email": "yourprogrammeradam\n@gmail.com",
         "email_copy": "yourprogrammeradam@gmail.com",
         "link_github": "https://github.com/adambprograming",
+        "link_github_arialabel": "Podívejte se na můj github, zde je link.",
         "link_linkedin": "https://www.linkedin.com/in/adam-bart%C5%AF%C5%A1ek-251107286/?locale=cs_CZ",
+        "link_linkedin_arialabel": "Podívejte se na můj linkedin, zde je link.",
         "alts": {
           "phone": "Ikona Telefonu",
           "email": "Ikona E-mailu",
