@@ -39,8 +39,8 @@
                 position: relative;
                 .tel-copied{
                     position: absolute;
-                    bottom: 5rem;
-                    right: 3rem;
+                    bottom: 50px;
+                    right: 30px;
                     transform: scale(0);
                     padding: 5px 12px;
                     background-color: var(--secondary-color);
@@ -51,10 +51,7 @@
                         transform: scale(1.5);
                     }
                 }
-                &:hover{
-                    transition: transform 0.2s;
-                    transform: scale(1.05);
-                }
+
                 .contact-tel-icon{
                     height: 37.5px;
                     & > *{
@@ -68,8 +65,8 @@
                 position: relative;
                 .mail-copied{
                     position: absolute;
-                    bottom: 6.5rem;
-                    right: 2.9rem;
+                    bottom: 65px;
+                    right: 29px;
                     transform: scale(0);
                     padding: 5px 12px;
                     background-color: var(--secondary-color);
@@ -79,10 +76,6 @@
                     &.clicked{
                         transform: scale(1.5);
                     }
-                }
-                &:hover{
-                    transition: transform 0.2s;
-                    transform: scale(1.05);
                 }
                 h6{
                     white-space: pre-wrap;
@@ -115,10 +108,6 @@
                     width: 50px;
                     height: 50px;
                     cursor: pointer;
-                    &:hover{
-                        transition: transform 0.2s;
-                        transform: scale(1.05);
-                    }
                     & > *{
                         fill: var(--icon-color-contacts);
                     }
@@ -137,13 +126,33 @@
             flex-direction: column;
             flex-grow: 1;
             .contact-contacts{
-                .contact-tel .tel-copied{
-                    bottom: 5.5rem;
-                    right: 2.5rem;
+                .contact-tel{
+                    &:hover{   
+                        transition: transform 0.2s;
+                        transform: scale(1.05);
+                    }
+                    .tel-copied{
+                        bottom: 55px;
+                        right: 25px;
+                    }
                 }
-                .contact-mail .mail-copied{
-                    bottom: 8rem;
-                    right: 4.3rem;
+                .contact-mail{
+                    &:hover{
+                        transition: transform 0.2s;
+                        transform: scale(1.05);
+                    }
+                    .mail-copied{
+                        bottom: 8px;
+                        right: 43px;
+                    }
+                }
+            }
+            .contact-links{
+                & > *{
+                    & > *:hover{
+                        transition: transform 0.2s;
+                        transform: scale(1.05);
+                    }
                 }
             }
         }

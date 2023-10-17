@@ -25,9 +25,9 @@ const MenuDropdown = () => {
         <div className="line-3 no-animation"></div>
       </div>
       <ul className={`dropdown ${activeMenu === true ? "active" : ""}`}>
-        <li className='dropdown-item'><button onClick={() => {document.getElementById('article-education').scrollIntoView({ behavior: 'smooth' })}}><h5>{languageDict.article_header.menu.education}</h5></button></li>
-        <li className='dropdown-item'><button onClick={() => {document.getElementById('article-techstack').scrollIntoView({ behavior: 'smooth' })}}><h5>{languageDict.article_header.menu.techstack}</h5></button></li>
-        <li className='dropdown-item'><button onClick={() => {document.getElementById('article-contact').scrollIntoView({ behavior: 'smooth' })}}><h5>{languageDict.article_header.menu.contact}</h5></button></li>
+        <li className='dropdown-item'><button onClick={() => {document.getElementById('article-education').scrollIntoView({ behavior: 'smooth' }); activeMenu && handleMenuClick()}}><h5>{languageDict.article_header.menu.education}</h5></button></li>
+        <li className='dropdown-item'><button onClick={() => {document.getElementById('article-techstack').scrollIntoView({ behavior: 'smooth' }); activeMenu && handleMenuClick()}}><h5>{languageDict.article_header.menu.techstack}</h5></button></li>
+        <li className='dropdown-item'><button onClick={() => {document.getElementById('article-contact').scrollIntoView({ behavior: 'smooth' }); activeMenu && handleMenuClick()}}><h5>{languageDict.article_header.menu.contact}</h5></button></li>
       </ul>
     </nav>
   )
