@@ -17,7 +17,6 @@
   /*
   bg-image already with opacity and bg-image-color for
   */
-  --bg-image: url("../../public/background_techstack.svg");
   --bg-image-color: #29379e;
   // Dont forget to edit slider-NUMBER as u need
   display: flex;
@@ -25,10 +24,6 @@
   border-radius: 20px;
   height: var(--height-tab-menu);
   overflow: hidden;
-  background-image: var(--bg-image);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 15%;
   .tab-menu-bg {
     margin: 0;
     background-color: var(--secondary-color);

@@ -13,8 +13,11 @@ import IconGithub from "../../public/techstack_github.svg";
 import IconPython from "../../public/techstack_python.svg";
 import IconFigma from "../../public/techstack_figma.svg";
 import IconTs from "../../public/techstack_ts.svg";
+import TechstackBackgroundImage from "../../public/background_techstack.svg"
 // React Functions
 import { useContext } from "react";
+// Next Functions
+import Image from "next/image";
 // Context
 import { LanguageContext } from "../../context/lang.context";
 // Components
@@ -29,6 +32,15 @@ const SectionTechstack = () => {
 
   return (
     <section id="techstack-container">
+      <Image 
+        className="techstack-bg-img"
+        src={TechstackBackgroundImage}
+        alt='background'
+        fill
+        style={{
+          objectFit: 'cover',
+        }}
+      />
       <ModuleTabs topics={topics} icons={icons} alts={alts} />
     </section>
   );
