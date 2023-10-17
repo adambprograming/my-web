@@ -78,10 +78,10 @@
           z-index: -4;
         }
         /*
-      every label must have unique slider-NUMBER class
-      height of each slider-NUMBER class count as 45px (25px icon + 10px*2 top&bottom space) * number of icons
-      when slider moves to each position it gets specific slider-NUMBER class, thats why there are exact numbers
-      */
+        every label must have unique slider-NUMBER class
+        height of each slider-NUMBER class count as 45px (25px icon + 10px*2 top&bottom space) * number of icons
+        when slider moves to each position it gets specific slider-NUMBER class, thats why there are exact numbers
+        */
         @mixin slider($height, $distance) {
           height: $height;
           -webkit-transform: translateY($distance);
@@ -132,10 +132,6 @@
           width: 25px;
           margin: 0rem 1rem;
         }
-      }
-      & > label:hover {
-        transition: transform 0.2s;
-        transform: scale(1.05);
       }
     }
     .menu-slider-fix {
@@ -308,6 +304,10 @@
             width: 35px;
             margin: 1rem 0rem;
           }
+        }
+        & > label:hover {
+          transition: transform 0.2s;
+          transform: scale(1.05);
         }
       }
       .menu-slider-fix {

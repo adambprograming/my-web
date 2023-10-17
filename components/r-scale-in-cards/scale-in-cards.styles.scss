@@ -20,10 +20,6 @@
       outline: none;
       border-radius: 20px;
       transition: background-color 0.8s;
-      &:hover h4{
-        transition: transform 0.2s;
-        transform: scale(1.05);
-      }
       &.active{
         background-color: var(--secondary-color);
         transition: background-color 1s;
@@ -46,6 +42,12 @@
         transition: max-height 1.8s ease;
       }
     }
+  }
+}
+@media only screen and (min-width: 850px) {
+  .scale-in-cards .scale-in-card .card-btn:hover h4{
+    transition: transform 0.2s;
+    transform: scale(1.05);
   }
 }
 @media only screen and (min-width: 1200px) {

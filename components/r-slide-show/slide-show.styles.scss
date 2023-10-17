@@ -135,10 +135,6 @@
   }
   .left-arrow-btn{
     cursor: pointer;
-    &:hover{
-      transition: transform 0.2s;
-      transform: scale(1.05);
-    }
     .left-arrow {
       min-width: 25px;
       height: 50px;
@@ -150,10 +146,6 @@
   }
   .right-arrow-btn{
     cursor: pointer;
-    &:hover{
-      transition: transform 0.2s;
-      transform: scale(1.05);
-    }
     .right-arrow {
       min-width: 25px;
       height: 50px;
@@ -162,5 +154,15 @@
       background-color: var(--text-color);
       clip-path: polygon(0 0, 100% 50%, 0 100%, 50% 50%);
     }
+  }
+}
+@media only screen and (min-width: 850px) {
+  .slide-show .left-arrow-btn:hover{
+    transition: transform 0.2s;
+    transform: scale(1.05);
+  }
+  .slide-show .right-arrow-btn:hover{
+    transition: transform 0.2s;
+    transform: scale(1.05);
   }
 }

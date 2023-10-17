@@ -1,7 +1,4 @@
 .nav {
-  &:hover .dropdown{
-    display: block;
-  }
   .dropdown {
     display: none;
     position: absolute;
@@ -71,13 +68,7 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
     animation: animate-line-3-rev .7s ease-in-out;
   }
 
-  &:hover {
-    .line-1,
-    .line-2, 
-    .line-3 {
-      background-color: var(--secondary-color);
-    }
-  }
+
 
   &.active {
     .line-1 {
@@ -169,5 +160,15 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
 @media only screen and (min-width: 850px) {
   .nav{
       --multiplier: 1.31;
+      &:hover .dropdown{
+        display: block;
+      }
+  }
+  .menu-icon:hover {
+    .line-1,
+    .line-2, 
+    .line-3 {
+      background-color: var(--secondary-color);
+    }
   }
 }

@@ -1,3 +1,9 @@
+@mixin btn-slider($distance) {
+    -webkit-transform: translateX($distance);
+    -ms-transform: translateX($distance);
+    transform: translateX($distance);
+}
+
 /* Base styles for the switch container */
 .switch {
     position: relative;
@@ -78,40 +84,12 @@
         pointer-events: none;
     }
 
-    @mixin btn-slider($distance) {
-        -webkit-transform: translateX($distance);
-        -ms-transform: translateX($distance);
-        transform: translateX($distance);
-    }
-
-    // When the switch is hover, move the slider little bit to the right
-    input:hover + .slider:before {
-        @include btn-slider(calc(3px  * var(--multiplier)));
-    }
-
-    // When the switch is checked and hover, move the slider little bit to the left
-    input:checked:hover + .slider:before {
-        @include btn-slider(calc(33px  * var(--multiplier)));
-    }
-
     // When the switch is checked, move the slider to the right
     input:checked + .slider:before {
         @include btn-slider(calc(36px  * var(--multiplier)));
     }
 
-
-
-    // When the switch is hover, move the slider little bit to the right
-    input:hover + .slider-en:before {
-        @include btn-slider(calc(-3px  * var(--multiplier)));
-    }
-
-    // When the switch is checked and hover, move the slider little bit to the left
-    input:checked:hover + .slider-en:before {
-        @include btn-slider(calc(-33px  * var(--multiplier)));
-    }
-
-    // When the switch is checked, move the slider to the right
+    // When the switch is checked, move the slider to the left
     input:checked + .slider-en:before {
         @include btn-slider(calc(-36px  * var(--multiplier)));
     }
@@ -120,5 +98,24 @@
 @media only screen and (min-width: 850px) {
     .switch{
         --multiplier: 1.31;
+        // When the switch is hover, move the slider little bit to the right
+        input:hover + .slider:before {
+            @include btn-slider(calc(3px  * var(--multiplier)));
+        }
+
+        // When the switch is checked and hover, move the slider little bit to the right
+        input:checked:hover + .slider:before {
+            @include btn-slider(calc(33px  * var(--multiplier)));
+        }
+        // When the switch is hover, move the slider little bit to the left
+        input:hover + .slider-en:before {
+            @include btn-slider(calc(-3px  * var(--multiplier)));
+        }
+
+        // When the switch is checked and hover, move the slider little bit to the left
+        input:checked:hover + .slider-en:before {
+            @include btn-slider(calc(-33px  * var(--multiplier)));
+        }
     }
 }
+
