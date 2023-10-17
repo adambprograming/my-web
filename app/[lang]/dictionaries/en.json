@@ -155,7 +155,9 @@
         "email": "yourprogrammeradam\n@gmail.com",
         "email_copy": "yourprogrammeradam@gmail.com",
         "link_github": "https://github.com/adambprograming",
+        "link_github_arialabel": "Check out my github, here is the link.",
         "link_linkedin": "https://www.linkedin.com/in/adam-bart%C5%AF%C5%A1ek-251107286/",
+        "link_linkedin_arialabel": "Check out my linkedin, here is the link.",
         "alts": {
           "phone": "Telephone Icon",
           "email": "Mail Icon",
